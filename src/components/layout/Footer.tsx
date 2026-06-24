@@ -1,6 +1,12 @@
 import Image from 'next/image'
 
-const siteLinks = ['Approach', 'Portfolio', 'Leadership', 'Track Record', 'Contact']
+const siteLinks = [
+  { label: 'Approach',    href: '/approach' },
+  { label: 'Portfolio',   href: '/portfolio' },
+  { label: 'Leadership',  href: '/leadership' },
+  { label: 'Track Record', href: '/track-record' },
+  { label: 'Contact',     href: '/contact' },
+]
 
 const offices = [
   { city: 'Dublin',  lines: ['6 Fern Road, Sandyford', 'D18 FP98, Ireland'] },
@@ -10,32 +16,41 @@ const offices = [
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-cream">
-      <div className="max-w-[1730px] mx-auto px-[156px] pt-[92px] pb-0">
-        <div className="flex gap-[168px] items-start">
+    <footer className="bg-navy text-cream mt-12 md:mt-20 xl:mt-0">
+      <div className="mx-auto px-5 md:px-10 xl:px-[156px] pt-10 md:pt-14 xl:pt-[92px]">
+
+        {/* Top grid */}
+        <div className="flex flex-col xl:flex-row gap-10 md:gap-12 xl:gap-[168px] xl:items-start">
+
           {/* Brand */}
-          <div className="w-[440px] shrink-0 flex flex-col gap-4">
+          <div className="xl:w-[440px] xl:shrink-0 flex flex-col gap-4">
             <Image
               src="/images/logo-white.png"
               alt="Everlough"
               width={218}
               height={60}
-              className="h-[45px] w-auto"
+              className="h-[38px] xl:h-[45px] w-auto"
             />
-            <p className="font-light text-[20px] leading-[1.55] text-cream/81 mt-2">
-              A private operating platform acquiring, stabilising and scaling businesses where value is constrained by execution rather than market opportunity.
+            <p className="font-light text-[15px] md:text-[17px] xl:text-[20px] leading-[1.55] text-cream/80 mt-1">
+              A private operating platform acquiring, stabilising and scaling businesses where value
+              is constrained by execution rather than market opportunity.
             </p>
           </div>
 
-          {/* Site nav */}
-          <div className="flex gap-[60px]">
-            <div className="flex flex-col gap-5 min-w-[160px]">
-              <p className="font-medium text-[20px]">Site</p>
-              <ul className="flex flex-col gap-[15px]">
+          {/* Link columns — 2-col on mobile/tablet, 3-col on desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:flex xl:gap-[60px] gap-x-6 gap-y-8">
+
+            {/* Site nav */}
+            <div className="flex flex-col gap-4 xl:gap-5 xl:min-w-[160px]">
+              <p className="font-medium text-[15px] xl:text-[20px]">Site</p>
+              <ul className="flex flex-col gap-3 xl:gap-[15px]">
                 {siteLinks.map((link) => (
-                  <li key={link}>
-                    <a href={`/${link.toLowerCase().replace(' ', '-')}`} className="font-light text-[18px] transition-opacity hover:opacity-60">
-                      {link}
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="font-light text-[14px] xl:text-[18px] transition-opacity hover:opacity-60"
+                    >
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -43,14 +58,16 @@ export function Footer() {
             </div>
 
             {/* Offices */}
-            <div className="flex flex-col gap-5 min-w-[214px]">
-              <p className="font-medium text-[20px]">Offices</p>
-              <div className="flex flex-col gap-[17px]">
+            <div className="flex flex-col gap-4 xl:gap-5 xl:min-w-[214px]">
+              <p className="font-medium text-[15px] xl:text-[20px]">Offices</p>
+              <div className="flex flex-col gap-4 xl:gap-[17px]">
                 {offices.map((office) => (
-                  <div key={office.city} className="flex flex-col gap-[7px]">
-                    <p className="font-normal text-[18px]">{office.city}</p>
+                  <div key={office.city} className="flex flex-col gap-1 xl:gap-[7px]">
+                    <p className="font-normal text-[14px] xl:text-[18px]">{office.city}</p>
                     {office.lines.map((line) => (
-                      <p key={line} className="font-light text-[18px] leading-[1.3]">{line}</p>
+                      <p key={line} className="font-light text-[13px] xl:text-[18px] leading-[1.3] text-cream/80">
+                        {line}
+                      </p>
                     ))}
                   </div>
                 ))}
@@ -58,19 +75,25 @@ export function Footer() {
             </div>
 
             {/* Enquiries */}
-            <div className="flex flex-col gap-5 min-w-[221px]">
-              <p className="font-medium text-[20px]">Enquiries</p>
-              <div className="flex flex-col gap-3">
-                <a href="mailto:enquiries@everlough.com" className="font-light text-[18px] transition-opacity hover:opacity-60">
+            <div className="flex flex-col gap-4 xl:gap-5 xl:min-w-[221px] col-span-2 md:col-span-1">
+              <p className="font-medium text-[15px] xl:text-[20px]">Enquiries</p>
+              <div className="flex flex-col gap-2 xl:gap-3">
+                <a
+                  href="mailto:enquiries@everlough.com"
+                  className="font-light text-[14px] xl:text-[18px] transition-opacity hover:opacity-60 break-all"
+                >
                   enquiries@everlough.com
                 </a>
-                <a href="tel:+35316853600" className="font-light text-[18px] transition-opacity hover:opacity-60">
+                <a
+                  href="tel:+35316853600"
+                  className="font-light text-[14px] xl:text-[18px] transition-opacity hover:opacity-60"
+                >
                   +353 1 685 3600
                 </a>
               </div>
               <a
                 href="/contact"
-                className="mt-3 inline-flex w-fit rounded-full border border-cream px-6 py-2 text-base font-medium uppercase tracking-widest transition-opacity hover:opacity-70"
+                className="mt-2 xl:mt-3 inline-flex w-fit rounded-full border border-cream px-5 py-2 text-[13px] xl:text-base font-medium uppercase tracking-widest transition-opacity hover:opacity-70"
               >
                 Speak with us →
               </a>
@@ -79,13 +102,17 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-[88px] border-t border-cream/20 flex items-center justify-between py-6">
-          <p className="font-light text-[18px] text-cream/80">
+        <div className="mt-10 md:mt-12 xl:mt-[88px] border-t border-cream/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 py-5 xl:py-6">
+          <p className="font-light text-[12px] md:text-[14px] xl:text-[18px] text-cream/70">
             © 2026 Everlough Group Limited. Registered in Ireland, No. 654321.
           </p>
-          <div className="flex gap-6">
-            <a href="/privacy" className="font-light text-[18px] transition-opacity hover:opacity-60">Privacy</a>
-            <a href="/legal"   className="font-light text-[18px] transition-opacity hover:opacity-60">Legal</a>
+          <div className="flex gap-5">
+            <a href="/privacy" className="font-light text-[12px] md:text-[14px] xl:text-[18px] transition-opacity hover:opacity-60">
+              Privacy
+            </a>
+            <a href="/legal" className="font-light text-[12px] md:text-[14px] xl:text-[18px] transition-opacity hover:opacity-60">
+              Legal
+            </a>
           </div>
         </div>
       </div>
