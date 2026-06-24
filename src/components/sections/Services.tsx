@@ -51,7 +51,7 @@ function ServiceCard({ title, description, image }: ServiceItem) {
   return (
     <div className="flex flex-col md:flex-row xl:flex-col gap-5 md:gap-8 xl:gap-[26px]">
       {/* Image — full-width on mobile, left-panel on tablet, full-width on desktop */}
-      <div className="relative w-full md:w-[280px] xl:w-full h-[260px] md:h-[340px] xl:h-[575px] rounded-[12px] xl:rounded-[15px] overflow-hidden shrink-0">
+      <div className="relative w-full md:w-[280px] xl:w-full h-[260px] md:h-[340px] xl:h-[575px] rounded-[15px] overflow-hidden shrink-0">
         <Image
           src={image}
           alt={title}
@@ -62,10 +62,10 @@ function ServiceCard({ title, description, image }: ServiceItem) {
       </div>
 
       <div className="flex flex-col gap-3 xl:gap-[26px]">
-        <h3 className="font-medium text-[24px] md:text-[28px] xl:text-[40px] leading-[1.4] xl:leading-[1.6] tracking-[-0.5px] xl:tracking-[-1.716px] capitalize text-navy">
+        <h3 className="font-medium text-[24px] md:text-[28px] xl:text-[40px] leading-[1.4] xl:leading-[1.6] tracking-[-0.5px] md:tracking-[-0.8px] xl:tracking-[-1.716px] capitalize text-navy">
           {title}
         </h3>
-        <p className="font-normal text-[17px] md:text-[20px] xl:text-[30px] leading-[1.55] xl:leading-[1.47] tracking-[-0.3px] xl:tracking-[-1.716px] text-navy">
+        <p className="font-normal text-[17px] md:text-[20px] xl:text-[30px] leading-[1.55] xl:leading-[1.47] tracking-[-0.3px] md:tracking-[-0.8px] xl:tracking-[-1.716px] text-navy">
           {description}
         </p>
       </div>

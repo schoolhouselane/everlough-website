@@ -12,7 +12,7 @@ export function Portfolio() {
       </SectionHeading>
 
       {/* 1-col mobile, 2-col tablet, 4-col desktop */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 md:gap-12 xl:gap-[153px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 md:gap-12 xl:gap-x-8 xl:gap-y-[153px]">
         {portfolio.map((company) => (
           <PortfolioItem key={company.id} {...company} />
         ))}

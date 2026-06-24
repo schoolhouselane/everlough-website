@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { cn } from '@/lib/cn'
 
@@ -17,6 +18,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ transparent = false }: NavbarProps) {
+  const pathname = usePathname()
   const [scrolled,   setScrolled]   = useState(false)
   const [menuOpen,   setMenuOpen]   = useState(false)
 
@@ -50,7 +52,7 @@ export function Navbar({ transparent = false }: NavbarProps) {
             : 'bg-white',
         )}
       >
-        <div className="mx-auto px-5 md:px-10 xl:px-[100px] h-[70px] md:h-[80px] xl:h-[90px] flex items-center justify-between">
+        <div className="mx-auto px-5 md:px-10 xl:px-[100px] h-[90px] flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="shrink-0 z-10">
             <Image
@@ -65,18 +67,22 @@ export function Navbar({ transparent = false }: NavbarProps) {
 
           {/* Desktop nav */}
           <nav className="hidden xl:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  'py-1 text-[18px] font-medium transition-opacity hover:opacity-60',
-                  isDark ? 'text-white' : 'text-navy',
-                )}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href)
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    'py-1 text-[18px] transition-opacity hover:opacity-60',
+                    isActive ? 'font-bold' : 'font-normal',
+                    isDark ? 'text-white' : 'text-navy',
+                  )}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
           </nav>
 
           <div className="flex items-center gap-4">
@@ -132,7 +138,7 @@ export function Navbar({ transparent = false }: NavbarProps) {
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
         )}
       >
-        <div className="h-[70px] md:h-[80px]" />
+        <div className="h-[90px]" />
         <nav className="flex flex-col px-5 md:px-10 pt-8 pb-10 gap-2 flex-1 overflow-y-auto">
           {navLinks.map((link) => (
             <a

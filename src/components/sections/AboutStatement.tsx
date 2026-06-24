@@ -8,7 +8,7 @@ export function AboutStatement() {
       <div className="flex flex-col xl:flex-row gap-10 xl:gap-[251px] xl:items-start">
         {/* Text block */}
         <div className="flex flex-col gap-8 md:gap-10 xl:gap-[73px] xl:w-[824px]">
-          <p className="text-[22px] md:text-[30px] xl:text-[45px] leading-[1.45] md:leading-[1.42] xl:leading-[1.42] tracking-[-0.5px] md:tracking-[-1px] xl:tracking-[-1.716px] text-navy">
+          <p className="text-[22px] md:text-[30px] xl:text-[45px] leading-[1.45] md:leading-[1.42] xl:leading-[1.42] tracking-[-0.9px] md:tracking-[-1.3px] xl:tracking-[-1.716px] text-navy">
             <span className="font-semibold">Everlough Holdings </span>
             <span className="font-normal">
               is a private operating platform that acquires, stabilises and scales lower mid-market

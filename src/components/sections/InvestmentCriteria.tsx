@@ -21,7 +21,7 @@ export function InvestmentCriteria() {
 
           {/* Left: headline + CTA */}
           <div className="flex flex-col gap-7 md:gap-8 xl:gap-[60px] xl:w-[563px] xl:shrink-0">
-            <h2 className="font-bold text-[32px] md:text-[44px] xl:text-[60px] leading-[1.2] xl:leading-[1.35] tracking-[-0.8px] xl:tracking-[-1.716px] capitalize text-cream text-balance">
+            <h2 className="font-bold text-[32px] md:text-[44px] xl:text-[60px] leading-[1.2] md:leading-[1.25] xl:leading-[1.35] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] capitalize text-cream text-balance">
               We move quickly where the situation warrants it.
             </h2>
             <UnderlineLink href="/contact" light>

@@ -15,8 +15,12 @@
 }
 
 @layer base {
-  html {
+  html,
+  body {
     background-color: #f2f2f2;
+  }
+
+  html {
     color: #1a1d23;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
