@@ -26,7 +26,7 @@ export function AboutStatement() {
         {/* Icon — hidden on mobile, shown from md */}
         <div className="hidden md:block xl:w-[373px] xl:h-[320px] shrink-0 relative w-[200px] h-[180px] md:w-[280px] md:h-[240px] self-center xl:self-auto">
           <Image
-            src="/images/everlough-icon.svg"
+            src="/images/everlough-icon.png"
             alt="Everlough Holdings"
             fill
             className="object-contain object-center"

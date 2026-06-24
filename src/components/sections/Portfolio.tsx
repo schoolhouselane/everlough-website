@@ -50,11 +50,11 @@ function PortfolioItem({
       <h3 className="font-medium text-[20px] md:text-[22px] xl:text-[35px] leading-[1.4] xl:leading-[1.83] tracking-[-0.3px] xl:tracking-[-1.716px] text-navy">
         {name}
       </h3>
-      <p className="font-normal text-[16px] md:text-[17px] xl:text-[25px] leading-[1.6] xl:leading-[1.76] tracking-[-0.2px] xl:tracking-[-1.716px] text-navy">
+      <p className="font-normal text-[16px] md:text-[17px] xl:text-[25px] leading-[1.6] xl:leading-[1.76] tracking-[-0.2px] xl:tracking-[-1.716px] text-navy flex-1">
         {description}
       </p>
 
-      <UnderlineLink href={`/portfolio/${slug}`}>Read more</UnderlineLink>
+      <UnderlineLink href={`/portfolio/${slug}`} className="whitespace-nowrap">Read more</UnderlineLink>
     </div>
   )
 }

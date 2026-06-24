@@ -1,6 +1,15 @@
+import { cn } from '@/lib/cn'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { DividerLine } from '@/components/ui/DividerLine'
 import { operatingModel } from '@/data/operatingModel'
+
+// Staircase widths from Figma: 1023/1153/1282/1461 out of 1461px canvas → 70/79/88/100%
+// Gaps scaled ×0.84 (Figma 1730px canvas → 1440px viewport)
+const stairConfig = [
+  { width: 'xl:w-[70%]', gap: 'xl:gap-[52px]'  },
+  { width: 'xl:w-[79%]', gap: 'xl:gap-[122px]' },
+  { width: 'xl:w-[88%]', gap: 'xl:gap-[165px]' },
+  { width: 'xl:w-full',  gap: 'xl:gap-[185px]' },
+]
 
 export function OperatingModel() {
   return (
@@ -9,45 +18,58 @@ export function OperatingModel() {
         A four-stage operating model.
       </SectionHeading>
 
-      <div className="flex flex-col gap-0">
-        {operatingModel.map((stage) => (
-          <OperatingStageRow key={stage.number} {...stage} />
-        ))}
-        <DividerLine />
+      {/* Desktop: right-aligned rows that grow wider downward (staircase) */}
+      <div className="xl:flex xl:flex-col xl:items-end">
+        {operatingModel.map((stage, i) => {
+          const { width, gap } = stairConfig[i]
+          return (
+            <div key={stage.number} className={cn('w-full', width)}>
+              {/* Horizontal rule at top of each row */}
+              <div className="border-t border-navy/20" />
+
+              <div className={cn(
+                'flex flex-col gap-2 py-5',
+                'md:flex-row md:items-start md:gap-8 md:py-6',
+                'xl:items-center xl:py-[18px]',
+                gap,
+              )}>
+                {/* Number */}
+                <span className={cn(
+                  'font-semibold leading-[1.2] text-mid-grey shrink-0',
+                  'text-[24px] tracking-[-0.5px]',
+                  'md:text-[32px] md:tracking-[-1px]',
+                  'xl:text-[40px] xl:leading-[48px] xl:tracking-[-1.716px] xl:w-[62px]',
+                )}>
+                  {stage.number}
+                </span>
+
+                {/* Title */}
+                <span className={cn(
+                  'font-medium text-navy shrink-0',
+                  'text-[20px] leading-[1.35] tracking-[-0.3px]',
+                  'md:text-[26px]',
+                  'xl:text-[35px] xl:leading-[51px] xl:tracking-[-1.716px] xl:whitespace-nowrap',
+                )}>
+                  {stage.title}
+                </span>
+
+                {/* Description — ml-auto pushes it flush to the right edge at desktop */}
+                <p className={cn(
+                  'font-normal text-navy',
+                  'text-[15px] leading-[1.65] tracking-[-0.2px]',
+                  'md:text-[17px]',
+                  'xl:text-[22px] xl:leading-[41px] xl:tracking-[-1.716px] xl:ml-auto xl:w-[480px] xl:shrink-0',
+                )}>
+                  {stage.description}
+                </p>
+              </div>
+            </div>
+          )
+        })}
+
+        {/* Bottom border on the last row */}
+        <div className="w-full border-t border-navy/20" />
       </div>
     </section>
-  )
-}
-
-function OperatingStageRow({
-  number,
-  title,
-  description,
-}: {
-  number:      string
-  title:       string
-  description: string
-}) {
-  return (
-    <div className="flex flex-col gap-0">
-      <DividerLine />
-      {/* Mobile/tablet: stacked layout. Desktop: horizontal row */}
-      <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6 xl:gap-[62px] py-5 md:py-6 xl:py-[10px]">
-        {/* Number */}
-        <span className="font-semibold text-[24px] md:text-[28px] xl:text-[40px] leading-[1.2] tracking-[-0.5px] xl:tracking-[-1.716px] text-mid-grey xl:w-[68px] shrink-0">
-          {number}
-        </span>
-
-        {/* Title + description — stacked on mobile, row on md+ */}
-        <div className="flex flex-col md:flex-row md:items-start md:gap-8 xl:gap-[62px] flex-1">
-          <span className="font-medium text-[20px] md:text-[22px] xl:text-[35px] leading-[1.35] xl:leading-[1.37] tracking-[-0.3px] xl:tracking-[-1.716px] text-navy md:w-[160px] xl:w-[200px] shrink-0">
-            {title}
-          </span>
-          <p className="font-normal text-[15px] md:text-[17px] xl:text-[22px] leading-[1.65] xl:leading-[1.86] tracking-[-0.2px] xl:tracking-[-1.716px] text-navy xl:max-w-[665px]">
-            {description}
-          </p>
-        </div>
-      </div>
-    </div>
   )
 }
