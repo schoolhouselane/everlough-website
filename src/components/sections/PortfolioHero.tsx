@@ -17,7 +17,7 @@ export function PortfolioHero() {
       {/* Banner image */}
       <div className="relative h-[180px] md:h-[340px] xl:h-[520px] rounded-[10px] md:rounded-[12px] xl:rounded-[15px] overflow-hidden">
         <Image
-          src="/images/portfolio/hero-handshake-2.jpg"
+          src="/images/portfolio/hero.png"
           alt="Everlough portfolio — businesses we operate"
           fill
           priority

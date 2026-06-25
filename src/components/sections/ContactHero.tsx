@@ -36,7 +36,7 @@ export function ContactHero() {
       <div className="xl:hidden mb-8 md:mb-10">
         <div className="relative w-full h-[260px] md:h-[380px] rounded-[15px] overflow-hidden">
           <Image
-            src="/images/contact/hero.jpg"
+            src="/images/contact/hero.png"
             alt="Everlough offices"
             fill
             priority
@@ -62,7 +62,7 @@ export function ContactHero() {
         {/* Desktop background image */}
         <div className="hidden xl:block absolute inset-0">
           <Image
-            src="/images/contact/hero.jpg"
+            src="/images/contact/hero.png"
             alt="Everlough offices"
             fill
             priority

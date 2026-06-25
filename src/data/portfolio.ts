@@ -35,4 +35,11 @@ export const portfolio: PortfolioCompany[] = [
     logo:        '/images/logos/data-direct-intelligence.png',
     slug:        'dd-intelligence',
   },
+  {
+    id:          'schoolhouse-lane',
+    name:        'Schoolhouse Lane',
+    description: 'AI-powered creative design and development. Works with Private Equity and VCs to create new asset classes through strategic creative positioning.',
+    logo:        '/images/logos/schoolhouse.png',
+    slug:        'schoolhouse-lane',
+  },
 ]

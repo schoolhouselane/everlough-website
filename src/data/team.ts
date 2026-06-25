@@ -10,24 +10,24 @@ export const team: TeamMember[] = [
     id:    'keith-oloughlin',
     name:  "Keith O'Loughlin",
     role:  'Chairman',
-    image: '/images/team/keith-oloughlin.jpg',
+    image: '/images/team/keith-oloughlin.png',
   },
   {
     id:    'aine-gleghorne',
     name:  'Aine Gleghorne',
     role:  'Chief Financial Officer',
-    image: '/images/team/aine-gleghorne.jpg',
+    image: '/images/team/aine-gleghorne.png',
   },
   {
     id:    'andy-hoskins',
     name:  'Andy Hoskins',
     role:  'Advisor to the Board',
-    image: '/images/team/andy-hoskins.jpg',
+    image: '/images/team/andy-hoskins.png',
   },
   {
     id:    'adam-ferris',
     name:  'Adam Ferris',
     role:  'Managing Director',
-    image: '/images/team/adam-ferris.jpg',
+    image: '/images/team/adam-ferris.png',
   },
 ]

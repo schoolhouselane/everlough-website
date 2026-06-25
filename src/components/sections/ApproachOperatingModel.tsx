@@ -72,7 +72,7 @@ export function ApproachOperatingModel() {
         {/* Right: cityscape image — desktop only */}
         <div className="hidden xl:block xl:flex-1 relative">
           <Image
-            src="/images/approach/operating-model.jpg"
+            src="/images/approach/operating-model.png"
             alt="London city financial district"
             fill
             sizes="(max-width: 1280px) 0vw, 50vw"
@@ -86,7 +86,7 @@ export function ApproachOperatingModel() {
       {/* Mobile: image below content */}
       <div className="xl:hidden relative h-[240px] md:h-[340px]">
         <Image
-          src="/images/approach/operating-model.jpg"
+          src="/images/approach/operating-model.png"
           alt="London city financial district"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 0vw"

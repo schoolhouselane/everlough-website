@@ -20,7 +20,7 @@ export function ApproachHero() {
         {/* Large landscape — left */}
         <div className="relative w-full xl:flex-[55] xl:w-auto h-[220px] md:h-[380px] xl:h-[596px] rounded-[15px] overflow-hidden">
           <Image
-            src="/images/approach/hero.jpg"
+            src="/images/approach/hero.png"
             alt="Business handshake"
             fill
             priority
@@ -33,7 +33,7 @@ export function ApproachHero() {
         <div className="flex gap-3 xl:flex-[45] xl:gap-[12px]">
           <div className="relative flex-1 h-[160px] md:h-[280px] xl:h-[375px] rounded-[15px] overflow-hidden">
             <Image
-              src="/images/approach/portrait-1.jpg"
+              src="/images/approach/portrait-1.png"
               alt="Strategic planning"
               fill
               sizes="(max-width: 768px) 50vw, (max-width: 1280px) 50vw, 270px"
@@ -42,7 +42,7 @@ export function ApproachHero() {
           </div>
           <div className="relative flex-1 h-[160px] md:h-[280px] xl:h-[375px] rounded-[15px] overflow-hidden">
             <Image
-              src="/images/approach/portrait-2.jpg"
+              src="/images/approach/portrait-2.png"
               alt="London architecture"
               fill
               sizes="(max-width: 768px) 50vw, (max-width: 1280px) 50vw, 270px"

@@ -33,7 +33,7 @@ export function ApproachAdvisers() {
       {/* Wide image */}
       <div className="relative w-full h-[220px] md:h-[360px] xl:h-[468px] rounded-[15px] overflow-hidden mb-12 md:mb-16 xl:mb-[71px]">
         <Image
-          src="/images/approach/advisers.jpg"
+          src="/images/approach/advisers.png"
           alt="Business meeting"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1228px"
