@@ -4,12 +4,18 @@ import { useState, type FormEvent } from 'react'
 import { cn } from '@/lib/cn'
 
 interface FormState {
-  name:     string
-  phone:    string
-  email:    string
-  service:  string
-  interest: string
+  name:       string
+  phone:      string
+  email:      string
+  service:    string
+  interest:   string
   newsletter: boolean
+}
+
+interface FormErrors {
+  name?:    string
+  phone?:   string
+  email?:   string
 }
 
 const initialState: FormState = {
@@ -21,18 +27,53 @@ const initialState: FormState = {
   newsletter: false,
 }
 
+function validatePhone(value: string) {
+  const cleaned = value.replace(/[\s\-().]/g, '')
+  return /^\+?[0-9]{7,15}$/.test(cleaned)
+}
+
+function validateEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+}
+
 export function ContactForm() {
-  const [form, setForm]         = useState<FormState>(initialState)
+  const [form, setForm]           = useState<FormState>(initialState)
+  const [errors, setErrors]       = useState<FormErrors>({})
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target
     setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }))
+    // Clear error on change
+    if (name in errors) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }))
+    }
+  }
+
+  const validate = (): FormErrors => {
+    const errs: FormErrors = {}
+    if (!form.name.trim()) {
+      errs.name = 'Please enter your name.'
+    }
+    if (!form.phone.trim()) {
+      errs.phone = 'Please enter your phone number.'
+    } else if (!validatePhone(form.phone)) {
+      errs.phone = 'Please enter a valid phone number.'
+    }
+    if (form.email && !validateEmail(form.email)) {
+      errs.email = 'Please enter a valid email address.'
+    }
+    return errs
   }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    const errs = validate()
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs)
+      return
+    }
     setSubmitting(true)
     await new Promise((r) => setTimeout(r, 800))
     setSubmitting(false)
@@ -59,15 +100,15 @@ export function ContactForm() {
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-[39px]">
-          <Field label="What's your name?*" name="name" value={form.name} onChange={handleChange} required />
-          <Field label="What's your phone number?*" name="phone" value={form.phone} onChange={handleChange} type="tel" required />
-          <Field label="What's your email?" name="email" value={form.email} onChange={handleChange} type="email" />
+        <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-[20px]">
+          <Field label="What's your name?*" name="name" value={form.name} onChange={handleChange} required error={errors.name} />
+          <Field label="What's your phone number?*" name="phone" value={form.phone} onChange={handleChange} type="tel" required error={errors.phone} />
+          <Field label="What's your email?" name="email" value={form.email} onChange={handleChange} type="email" error={errors.email} />
           <Field label="What Service Are You Most Interested In?" name="service" value={form.service} onChange={handleChange} />
           <Field label="Describe your interest" name="interest" value={form.interest} onChange={handleChange} />
 
           {/* Newsletter */}
-          <label className="flex items-start gap-3 cursor-pointer">
+          <label className="flex items-start gap-3 cursor-pointer mt-2">
             <input
               type="checkbox"
               name="newsletter"
@@ -83,7 +124,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-navy text-white font-bold text-[18px] md:text-[19px] xl:text-[20px] leading-[1.2] capitalize py-[14px] rounded-full hover:opacity-80 transition-opacity disabled:opacity-50"
+            className="w-full bg-navy text-white font-bold text-[18px] md:text-[19px] xl:text-[20px] leading-[1.2] capitalize py-[14px] rounded-full hover:opacity-80 transition-opacity disabled:opacity-50 mt-2"
           >
             {submitting ? 'Sending…' : 'Submit'}
           </button>
@@ -100,6 +141,7 @@ function Field({
   onChange,
   type = 'text',
   required,
+  error,
 }: {
   label:    string
   name:     string
@@ -107,9 +149,10 @@ function Field({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   type?:    string
   required?: boolean
+  error?:   string
 }) {
   return (
-    <div className="flex flex-col gap-[10px]">
+    <div className="flex flex-col gap-[8px]">
       <label htmlFor={name} className="font-normal text-[14px] md:text-[15px] xl:text-[16px] leading-[1.4] text-black">
         {label}
       </label>
@@ -121,12 +164,20 @@ function Field({
         onChange={onChange}
         required={required}
         className={cn(
-          'w-full bg-transparent border-b border-black/30 pb-2',
+          'w-full bg-transparent border-b pb-2',
           'font-normal text-[14px] md:text-[15px] xl:text-[16px] leading-[1.4] text-black',
-          'outline-none focus:border-navy transition-colors',
+          'outline-none transition-colors',
           'placeholder:text-black/30',
+          error
+            ? 'border-red-500 focus:border-red-500'
+            : 'border-black/30 focus:border-navy',
         )}
       />
+      {error && (
+        <p className="font-normal text-[12px] md:text-[13px] xl:text-[14px] leading-[1.4] text-red-500">
+          {error}
+        </p>
+      )}
     </div>
   )
 }
