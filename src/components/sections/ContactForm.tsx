@@ -100,7 +100,7 @@ export function ContactForm() {
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-[20px]">
+        <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-[28px]">
           <Field label="What's your name?*" name="name" value={form.name} onChange={handleChange} required error={errors.name} />
           <Field label="What's your phone number?*" name="phone" value={form.phone} onChange={handleChange} type="tel" required error={errors.phone} />
           <Field label="What's your email?" name="email" value={form.email} onChange={handleChange} type="email" error={errors.email} />
@@ -169,7 +169,7 @@ function Field({
           'placeholder:text-black/50',
           error
             ? 'border-red-500 focus:border-red-500'
-            : 'border-black/30 focus:border-navy',
+            : 'border-black/15 focus:border-navy',
         )}
       />
       {error && (
