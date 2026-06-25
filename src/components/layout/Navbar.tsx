@@ -65,7 +65,7 @@ export function Navbar() {
               width={218}
               height={60}
               priority
-              className="h-[38px] md:h-[42px] xl:h-[48px] w-auto"
+              className="h-[38px] md:h-[42px] xl:h-[48px] w-auto mix-blend-multiply"
             />
           </a>
 
@@ -128,7 +128,7 @@ export function Navbar() {
               alt="Everlough"
               width={123}
               height={34}
-              className="h-[34px] w-auto opacity-80"
+              className="h-[34px] w-auto opacity-80 mix-blend-multiply"
             />
           </a>
           <button
