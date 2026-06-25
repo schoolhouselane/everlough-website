@@ -94,7 +94,7 @@ export function Navbar() {
             {/* Desktop CTA */}
             <a
               href="/contact"
-              className="hidden xl:inline-flex rounded-full border border-black text-black px-6 py-2 text-base font-medium uppercase tracking-widest transition-opacity hover:opacity-70"
+              className="hidden xl:inline-flex rounded-full border border-black text-black px-6 py-2 text-base font-medium uppercase tracking-widest transition-all hover:bg-[#242424] hover:text-white hover:border-[#242424] hover:opacity-100"
             >
               Speak with us
             </a>
@@ -160,7 +160,7 @@ export function Navbar() {
           <a
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="inline-flex items-center justify-center h-[44px] w-[186px] rounded-full border border-[#1e1e20] px-6 text-[16px] font-medium uppercase text-[#1e1e20]"
+            className="inline-flex items-center justify-center h-[44px] w-[186px] rounded-full border border-[#1e1e20] px-6 text-[16px] font-medium uppercase text-[#1e1e20] transition-all hover:bg-[#242424] hover:text-white hover:border-[#242424]"
           >
             Speak with us
           </a>
