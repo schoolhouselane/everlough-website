@@ -9,7 +9,7 @@ interface HeroProps {
 
 export function Hero({ image, headline, body }: HeroProps) {
   return (
-    <section className="relative h-[520px] md:h-[600px] xl:h-[715px] mx-4 md:mx-8 xl:mx-[100px] mt-[82px] md:mt-[96px] xl:mt-[153px] rounded-[15px] overflow-hidden">
+    <section className="relative h-[520px] md:h-[600px] xl:h-[715px] mx-4 md:mx-8 xl:mx-[100px] mt-[82px] md:mt-[96px] xl:mt-[153px] rounded-[15px] overflow-hidden bg-bg">
       {/* Background image */}
       <Image
         src={image}
