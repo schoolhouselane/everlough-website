@@ -11,7 +11,7 @@ export function LeadershipHero() {
       {/* Two-column heading + description */}
       <div className="flex flex-col gap-6 md:gap-8 xl:flex-row xl:items-start xl:justify-between xl:gap-0 mb-8 md:mb-10 xl:mb-0">
         <div className="flex flex-col gap-6 md:gap-8 xl:gap-[100px] xl:items-start">
-          <h1 className="font-bold text-[30px] md:text-[46px] xl:text-[60px] leading-[1.2] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy capitalize xl:max-w-[442px]">
+          <h1 className="font-bold text-[30px] md:text-[46px] xl:text-[60px] leading-[1.2] xl:leading-[77px] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy capitalize xl:max-w-[442px]">
             Operators in the seats.
           </h1>
           <div className="xl:block">

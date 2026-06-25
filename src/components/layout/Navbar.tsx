@@ -13,6 +13,14 @@ const navLinks = [
   { label: 'Contact',    href: '/contact' },
 ]
 
+function CloseIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
+      <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 interface NavbarProps {
   transparent?: boolean
 }
@@ -37,6 +45,12 @@ export function Navbar({ transparent = false }: NavbarProps) {
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
+
+  // Lock body scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
   const isDark = transparent && !scrolled && !menuOpen
 
@@ -103,63 +117,68 @@ export function Navbar({ transparent = false }: NavbarProps) {
             <button
               onClick={() => setMenuOpen((o) => !o)}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-              className={cn(
-                'xl:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px]',
-              )}
+              className="xl:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px]"
             >
-              <span
-                className={cn(
-                  'block w-6 h-[2px] transition-all duration-300',
-                  menuOpen ? 'rotate-45 translate-y-2' : '',
-                  isDark ? 'bg-white' : 'bg-black',
-                )}
-              />
-              <span
-                className={cn(
-                  'block w-6 h-[2px] transition-all duration-300',
-                  menuOpen ? 'opacity-0' : '',
-                  isDark ? 'bg-white' : 'bg-black',
-                )}
-              />
-              <span
-                className={cn(
-                  'block w-6 h-[2px] transition-all duration-300',
-                  menuOpen ? '-rotate-45 -translate-y-2' : '',
-                  isDark ? 'bg-white' : 'bg-black',
-                )}
-              />
+              <span className={cn('block w-6 h-[2px] transition-all duration-300', isDark ? 'bg-white' : 'bg-black')} />
+              <span className={cn('block w-6 h-[2px] transition-all duration-300', isDark ? 'bg-white' : 'bg-black')} />
+              <span className={cn('block w-6 h-[2px] transition-all duration-300', isDark ? 'bg-white' : 'bg-black')} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile / Tablet dropdown menu */}
+      {/* Mobile / Tablet full-screen menu — matches Figma node 112:834 */}
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-white flex flex-col xl:hidden transition-all duration-300',
+          'fixed inset-0 z-[60] bg-[#f2f2f2] flex flex-col xl:hidden transition-all duration-300',
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
         )}
       >
-        <div className="h-[90px]" />
-        <nav className="flex flex-col px-5 md:px-10 pt-8 pb-10 gap-2 flex-1 overflow-y-auto">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="py-4 text-[28px] md:text-[32px] font-medium text-navy border-b border-navy/10 transition-opacity hover:opacity-60"
-            >
-              {link.label}
-            </a>
-          ))}
+        {/* Menu header: logo + X */}
+        <div className="flex items-center justify-between h-[64px] px-[16px] mx-[24px] border-b border-[rgba(54,31,6,0.16)] shrink-0">
+          <a href="/" onClick={() => setMenuOpen(false)}>
+            <Image
+              src="/images/logo-black.png"
+              alt="Everlough"
+              width={123}
+              height={34}
+              className="h-[34px] w-auto opacity-80"
+            />
+          </a>
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+            className="w-[30px] h-[30px] flex items-center justify-center text-[#1e1e20]"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+
+        {/* Menu body */}
+        <div className="flex flex-col gap-[39px] px-[24px] pt-[40px] overflow-y-auto">
+          {/* Nav links */}
+          <div className="flex flex-col gap-5">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="border-b border-black py-[2px] text-[16px] font-normal text-[#1e1e20] capitalize leading-[27.42px]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* CTA button */}
           <a
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-8 self-start rounded-full border border-navy px-6 py-3 text-base font-medium uppercase tracking-widest text-navy transition-opacity hover:opacity-70"
+            className="inline-flex items-center justify-center h-[44px] w-[186px] rounded-full border border-[#1e1e20] px-6 text-[16px] font-medium uppercase text-[#1e1e20]"
           >
             Speak with us
           </a>
-        </nav>
+        </div>
       </div>
     </>
   )

@@ -5,7 +5,7 @@ export function ApproachHero() {
     <section className="mx-auto px-5 md:px-10 xl:px-[106px] pt-[130px] md:pt-[150px] xl:pt-[200px] pb-12 md:pb-16 xl:pb-[100px]">
       {/* Heading row */}
       <div className="flex flex-col gap-6 md:gap-8 xl:flex-row xl:items-start xl:justify-between xl:gap-0 mb-10 md:mb-12 xl:mb-[72px]">
-        <h1 className="font-semibold text-[30px] md:text-[46px] xl:text-[60px] leading-[1.2] md:leading-[1.2] xl:leading-[1.2] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy xl:w-[467px] shrink-0">
+        <h1 className="font-semibold text-[30px] md:text-[46px] xl:text-[60px] leading-[1.2] md:leading-[1.2] xl:leading-[81.12px] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy xl:w-[467px] shrink-0">
           How we operate
         </h1>
         <p className="font-normal text-[16px] md:text-[20px] xl:text-[25px] leading-[1.65] md:leading-[1.6] xl:leading-[1.68] tracking-[-0.2px] md:tracking-[-0.5px] xl:tracking-[-1.716px] text-navy xl:w-[724px] xl:text-right">

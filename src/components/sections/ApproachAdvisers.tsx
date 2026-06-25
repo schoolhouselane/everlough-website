@@ -20,7 +20,7 @@ export function ApproachAdvisers() {
     <section className="mx-auto px-5 md:px-10 xl:px-[106px] pb-16 md:pb-20 xl:pb-[120px]">
       {/* Heading row */}
       <div className="flex flex-col gap-6 md:gap-8 xl:flex-row xl:items-start xl:justify-between xl:gap-0 mb-10 md:mb-14 xl:mb-[65px]">
-        <h2 className="font-bold text-[30px] md:text-[46px] xl:text-[60px] leading-[1.2] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy xl:w-[467px] shrink-0">
+        <h2 className="font-bold text-[30px] md:text-[46px] xl:text-[60px] leading-[1.2] xl:leading-[81.12px] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy xl:w-[467px] shrink-0">
           For advisers and creditors.
         </h2>
         <p className="font-normal text-[16px] md:text-[20px] xl:text-[25px] leading-[1.65] md:leading-[1.6] xl:leading-[1.68] tracking-[-0.2px] md:tracking-[-0.5px] xl:tracking-[-1.716px] text-navy xl:w-[707px]">

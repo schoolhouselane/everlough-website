@@ -75,7 +75,7 @@ export function ContactHero() {
         {/* Desktop: left text column (absolutely overlaid on image) */}
         <div className="hidden xl:flex flex-col gap-[40px] absolute left-[62px] top-[120px] max-w-[466px] z-10">
           <div className="flex flex-col gap-[16px]">
-            <h1 className="font-bold text-[60px] leading-[1.18] tracking-[-1.716px] text-white capitalize">
+            <h1 className="font-bold text-[60px] leading-[81.12px] tracking-[-1.716px] text-white capitalize">
               Let&apos;s discuss the next chapter.
             </h1>
             <p className="font-normal text-[20px] leading-[1.65] text-white/85">

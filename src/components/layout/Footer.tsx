@@ -79,7 +79,7 @@ export function Footer() {
               <div className="flex flex-col gap-2 xl:gap-3">
                 <a
                   href="mailto:enquiries@everlough.com"
-                  className="font-light text-[14px] xl:text-[18px] transition-opacity hover:opacity-60 break-all"
+                  className="font-light text-[14px] xl:text-[18px] transition-opacity hover:opacity-60 whitespace-nowrap"
                 >
                   enquiries@everlough.com
                 </a>

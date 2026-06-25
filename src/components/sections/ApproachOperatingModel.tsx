@@ -33,7 +33,7 @@ export function ApproachOperatingModel() {
             'font-bold leading-[1.2] text-cream mb-12 md:mb-16 xl:mb-[80px]',
             'text-[30px] tracking-[-0.8px]',
             'md:text-[46px] md:tracking-[-1.2px]',
-            'xl:text-[60px] xl:tracking-[-1.716px]',
+            'xl:text-[60px] xl:leading-[81.12px] xl:tracking-[-1.716px]',
           )}>
             The Operating Model.
           </h2>
