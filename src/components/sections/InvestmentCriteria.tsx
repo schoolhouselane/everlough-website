@@ -1,4 +1,5 @@
 import { UnderlineLink } from '@/components/ui/UnderlineLink'
+import { Reveal } from '@/components/ui/Reveal'
 
 interface Stat {
   value:       string
@@ -20,19 +21,21 @@ export function InvestmentCriteria() {
         <div className="flex flex-col xl:flex-row gap-10 md:gap-12 xl:gap-[278px] xl:items-center">
 
           {/* Left: headline + CTA */}
-          <div className="flex flex-col gap-7 md:gap-8 xl:gap-[60px] xl:w-[563px] xl:shrink-0">
+          <Reveal className="flex flex-col gap-7 md:gap-8 xl:gap-[60px] xl:w-[563px] xl:shrink-0">
             <h2 className="font-bold text-[32px] md:text-[44px] xl:text-[60px] leading-[1.2] md:leading-[1.25] xl:leading-[1.35] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] capitalize text-cream text-balance">
               We move quickly where the situation warrants it.
             </h2>
             <UnderlineLink href="/contact" light>
               Start a confidential conversation
             </UnderlineLink>
-          </div>
+          </Reveal>
 
           {/* Right: 2×2 stats grid */}
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:gap-x-16 md:gap-y-12 xl:gap-x-[76px] xl:gap-y-[78px] xl:flex-1">
-            {stats.map((stat) => (
-              <StatBlock key={stat.label} {...stat} />
+            {stats.map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 80}>
+                <StatBlock {...stat} />
+              </Reveal>
             ))}
           </div>
         </div>

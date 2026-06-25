@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { UnderlineLink } from '@/components/ui/UnderlineLink'
+import { Reveal } from '@/components/ui/Reveal'
 import { portfolio } from '@/data/portfolio'
 
 export function Portfolio() {
@@ -8,10 +9,12 @@ export function Portfolio() {
     <section className="pt-12 md:pt-20 xl:pt-[119px]">
       {/* Heading — inside normal padding */}
       <div className="px-5 md:px-10 xl:px-[106px]">
+        <Reveal>
         <SectionHeading className="xl:w-[785px] mb-12 md:mb-16 xl:mb-[119px]">
           Two core engines.{' '}
           <span className="block">Selective operating assets.</span>
         </SectionHeading>
+        </Reveal>
       </div>
 
       {/* Horizontal scroll — single row on all breakpoints */}

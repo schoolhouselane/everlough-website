@@ -26,15 +26,15 @@ export function Hero({ image, headline, body }: HeroProps) {
       {/* Content — bottom left */}
       <div className="absolute bottom-8 md:bottom-10 xl:bottom-[50px] left-5 md:left-10 xl:left-[59px] flex flex-col gap-5 md:gap-6 xl:gap-[27px] w-full max-w-[90%] md:max-w-[600px] xl:max-w-[703px] pr-5">
         <div className="flex flex-col gap-3 md:gap-4 xl:gap-[19px] text-white">
-          <h1 className="font-bold text-[32px] md:text-[44px] xl:text-[60px] leading-[1.2] md:leading-[1.25] xl:leading-[81.12px] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] capitalize text-balance">
+          <h1 className="animate-fade-up font-bold text-[32px] md:text-[44px] xl:text-[60px] leading-[1.2] md:leading-[1.25] xl:leading-[81.12px] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] capitalize text-balance">
             {headline}
           </h1>
-          <p className="font-normal text-[16px] md:text-[20px] xl:text-[25px] leading-[1.6] md:leading-[1.65] xl:leading-[1.68]">
+          <p className="animate-fade-up font-normal text-[16px] md:text-[20px] xl:text-[25px] leading-[1.6] md:leading-[1.65] xl:leading-[1.68]" style={{ animationDelay: '160ms' }}>
             {body}
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="animate-fade-up flex flex-wrap gap-3" style={{ animationDelay: '300ms' }}>
           <Button as="a" href="/approach" intent="primary" size="sm">
             Get to know us
           </Button>

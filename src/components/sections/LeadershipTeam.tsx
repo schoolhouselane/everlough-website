@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { cn } from '@/lib/cn'
+import { Reveal } from '@/components/ui/Reveal'
 import { leadershipTeam, type LeadershipMember } from '@/data/leadershipTeam'
 
 export function LeadershipTeam() {
@@ -7,7 +8,9 @@ export function LeadershipTeam() {
     <section className="mx-auto px-5 md:px-10 xl:px-[106px] pb-0">
       <div className="flex flex-col gap-16 md:gap-20 xl:gap-[160px]">
         {leadershipTeam.map((member, i) => (
-          <PersonBlock key={member.id} member={member} priority={i === 0} />
+          <Reveal key={member.id}>
+            <PersonBlock member={member} priority={i === 0} />
+          </Reveal>
         ))}
       </div>
     </section>
