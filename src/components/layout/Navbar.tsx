@@ -21,11 +21,7 @@ function CloseIcon() {
   )
 }
 
-interface NavbarProps {
-  transparent?: boolean
-}
-
-export function Navbar({ transparent = false }: NavbarProps) {
+export function Navbar() {
   const pathname = usePathname()
   const [scrolled,   setScrolled]   = useState(false)
   const [menuOpen,   setMenuOpen]   = useState(false)
@@ -52,25 +48,19 @@ export function Navbar({ transparent = false }: NavbarProps) {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  const isDark = transparent && !scrolled && !menuOpen
-
   return (
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled || menuOpen
-            ? 'bg-[#E3E3E3] shadow-sm'
-            : transparent
-            ? 'bg-transparent'
-            : 'bg-[#E3E3E3]',
+          'fixed top-0 left-0 right-0 z-50 bg-[#E3E3E3] transition-all duration-300',
+          scrolled && 'shadow-sm',
         )}
       >
         <div className="mx-auto px-5 md:px-10 xl:px-[100px] h-[90px] flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="shrink-0 z-10">
             <Image
-              src={isDark ? '/images/logo-white.png' : '/images/logo-black.png'}
+              src="/images/logo-black.png"
               alt="Everlough"
               width={218}
               height={60}
@@ -88,11 +78,10 @@ export function Navbar({ transparent = false }: NavbarProps) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'py-1 text-[18px] border-b-2 transition-colors',
+                    'py-1 text-[18px] border-b-2 transition-colors text-black',
                     isActive
                       ? 'font-bold border-current'
                       : 'font-normal border-transparent hover:font-bold hover:border-current',
-                    isDark ? 'text-white' : 'text-black',
                   )}
                 >
                   {link.label}
@@ -105,10 +94,7 @@ export function Navbar({ transparent = false }: NavbarProps) {
             {/* Desktop CTA */}
             <a
               href="/contact"
-              className={cn(
-                'hidden xl:inline-flex rounded-full border px-6 py-2 text-base font-medium uppercase tracking-widest transition-opacity hover:opacity-70',
-                isDark ? 'border-white text-white' : 'border-black text-black',
-              )}
+              className="hidden xl:inline-flex rounded-full border border-black text-black px-6 py-2 text-base font-medium uppercase tracking-widest transition-opacity hover:opacity-70"
             >
               Speak with us
             </a>
@@ -119,9 +105,9 @@ export function Navbar({ transparent = false }: NavbarProps) {
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               className="xl:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px]"
             >
-              <span className={cn('block w-6 h-[2px] transition-all duration-300', isDark ? 'bg-white' : 'bg-black')} />
-              <span className={cn('block w-6 h-[2px] transition-all duration-300', isDark ? 'bg-white' : 'bg-black')} />
-              <span className={cn('block w-6 h-[2px] transition-all duration-300', isDark ? 'bg-white' : 'bg-black')} />
+              <span className="block w-6 h-[2px] bg-black transition-all duration-300" />
+              <span className="block w-6 h-[2px] bg-black transition-all duration-300" />
+              <span className="block w-6 h-[2px] bg-black transition-all duration-300" />
             </button>
           </div>
         </div>

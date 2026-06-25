@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Navbar transparent />
+      <Navbar />
       <main>
         <Hero
           image="/images/hero.png"

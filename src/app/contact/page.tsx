@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="pb-16 md:pb-20 xl:pb-[120px]">
         <ContactHero />
       </main>
       <Footer />
