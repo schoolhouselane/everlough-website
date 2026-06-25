@@ -166,10 +166,10 @@ function Field({
           'w-full bg-transparent border-b pb-2',
           'font-normal text-[14px] md:text-[15px] xl:text-[16px] leading-[1.4] text-black',
           'outline-none transition-colors',
-          'placeholder:text-black/50',
+          'placeholder:text-black',
           error
             ? 'border-red-500 focus:border-red-500'
-            : 'border-black/15 focus:border-navy',
+            : 'border-black focus:border-navy',
         )}
       />
       {error && (
