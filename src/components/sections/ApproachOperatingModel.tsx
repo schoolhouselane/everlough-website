@@ -75,6 +75,7 @@ export function ApproachOperatingModel() {
             src="/images/approach/operating-model.jpg"
             alt="London city financial district"
             fill
+            sizes="(max-width: 1280px) 0vw, 50vw"
             className="object-cover object-center"
           />
           {/* Gradient fade from left */}
@@ -88,6 +89,7 @@ export function ApproachOperatingModel() {
           src="/images/approach/operating-model.jpg"
           alt="London city financial district"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 0vw"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-rust/60 to-transparent" />

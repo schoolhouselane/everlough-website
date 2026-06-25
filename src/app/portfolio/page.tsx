@@ -18,7 +18,7 @@ export default function PortfolioPage() {
     <>
       <Navbar />
 
-      <main className="pt-[90px] bg-bg">
+      <main>
         {/* ── Hero ── */}
         <PortfolioHero />
 

@@ -24,12 +24,12 @@ export function AboutStatement() {
         </div>
 
         {/* Icon — hidden on mobile, shown from md */}
-        <div className="hidden md:block xl:w-[373px] xl:h-[320px] shrink-0 relative w-[200px] h-[180px] md:w-[280px] md:h-[240px] self-center xl:self-auto">
-          <Image
-            src="/images/everlough-icon.png"
+        <div className="hidden md:block xl:w-[373px] xl:h-[320px] shrink-0 w-[200px] h-[180px] md:w-[280px] md:h-[240px] self-center xl:self-auto">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/everlough-icon.svg"
             alt="Everlough Holdings"
-            fill
-            className="object-contain object-center"
+            className="w-full h-full object-contain object-center"
           />
         </div>
       </div>

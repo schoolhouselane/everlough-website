@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function PortfolioHero() {
   return (
-    <section className="px-5 md:px-10 xl:px-[106px] pt-8 md:pt-12 xl:pt-14">
+    <section className="px-5 md:px-10 xl:px-[106px] pt-[130px] md:pt-[150px] xl:pt-[180px]">
       {/* Headline + subhead */}
       <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-6 md:gap-8 xl:gap-0 mb-8 md:mb-10 xl:mb-10">
         <h1 className="font-semibold text-[32px] md:text-[50px] xl:text-[60px] leading-[1.2] xl:leading-[76px] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] capitalize text-navy max-w-[520px]">

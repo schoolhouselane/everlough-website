@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
 const siteLinks = [
-  { label: 'Approach',    href: '/approach' },
-  { label: 'Portfolio',   href: '/portfolio' },
-  { label: 'Leadership',  href: '/leadership' },
-  { label: 'Track Record', href: '/track-record' },
-  { label: 'Contact',     href: '/contact' },
+  { label: 'Approach',   href: '/approach' },
+  { label: 'Portfolio',  href: '/portfolio' },
+  { label: 'Leadership', href: '/leadership' },
+  { label: 'Contact',    href: '/contact' },
 ]
 
 const offices = [

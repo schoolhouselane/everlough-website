@@ -18,13 +18,14 @@ export function ApproachHero() {
       {/* Images */}
       <div className="flex flex-col gap-3 xl:flex-row xl:items-end xl:gap-[18px]">
         {/* Large landscape — left */}
-        <div className="relative w-full xl:flex-[55] h-[220px] md:h-[380px] xl:h-[596px] rounded-[15px] overflow-hidden shrink-0">
+        <div className="relative w-full xl:flex-[55] xl:w-auto h-[220px] md:h-[380px] xl:h-[596px] rounded-[15px] overflow-hidden">
           <Image
             src="/images/approach/hero.jpg"
             alt="Business handshake"
             fill
-            className="object-cover"
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 670px"
+            className="object-cover"
           />
         </div>
 
@@ -35,6 +36,7 @@ export function ApproachHero() {
               src="/images/approach/portrait-1.jpg"
               alt="Strategic planning"
               fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 50vw, 270px"
               className="object-cover"
             />
           </div>
@@ -43,6 +45,7 @@ export function ApproachHero() {
               src="/images/approach/portrait-2.jpg"
               alt="London architecture"
               fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 50vw, 270px"
               className="object-cover"
             />
           </div>

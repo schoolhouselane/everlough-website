@@ -36,6 +36,7 @@ export function ApproachAdvisers() {
           src="/images/approach/advisers.jpg"
           alt="Business meeting"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1228px"
           className="object-cover object-center"
         />
       </div>

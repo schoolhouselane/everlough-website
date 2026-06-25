@@ -40,6 +40,7 @@ function PortfolioItem({
           src={logo}
           alt={name}
           fill
+          sizes="(max-width: 768px) 200px, (max-width: 1280px) 280px, 350px"
           className="object-contain object-left"
         />
       </div>

@@ -6,15 +6,15 @@ export function LeadershipTeam() {
   return (
     <section className="mx-auto px-5 md:px-10 xl:px-[106px] pb-0">
       <div className="flex flex-col gap-16 md:gap-20 xl:gap-[160px]">
-        {leadershipTeam.map((member) => (
-          <PersonBlock key={member.id} member={member} />
+        {leadershipTeam.map((member, i) => (
+          <PersonBlock key={member.id} member={member} priority={i === 0} />
         ))}
       </div>
     </section>
   )
 }
 
-function PersonBlock({ member }: { member: LeadershipMember }) {
+function PersonBlock({ member, priority }: { member: LeadershipMember; priority?: boolean }) {
   const { name, role, bio, image, imagePosition } = member
   const isLeft = imagePosition === 'left'
 
@@ -30,6 +30,7 @@ function PersonBlock({ member }: { member: LeadershipMember }) {
           src={image}
           alt={name}
           fill
+          priority={priority}
           className="object-cover object-top"
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 480px"
         />
@@ -42,14 +43,12 @@ function PersonBlock({ member }: { member: LeadershipMember }) {
           <h2 className="font-medium text-[26px] md:text-[40px] xl:text-[60px] leading-[1.25] xl:leading-[1.25] tracking-[-0.6px] md:tracking-[-1.2px] xl:tracking-[-1.716px] text-navy capitalize">
             {name}
           </h2>
-          <div className="relative w-[60px] md:w-[80px] xl:w-[108px] h-[17px] md:h-[22px] xl:h-[27px] shrink-0 mt-2 md:mt-3 xl:mt-5">
-            <Image
-              src="/images/logos/linkedin.png"
-              alt="LinkedIn"
-              fill
-              className="object-contain"
-            />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logos/linkedin.svg"
+            alt="LinkedIn"
+            className="shrink-0 mt-2 md:mt-3 xl:mt-5 w-[60px] md:w-[80px] xl:w-[108px] h-auto"
+          />
         </div>
 
         {/* Role */}
