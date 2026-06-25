@@ -46,10 +46,10 @@ export function Navbar({ transparent = false }: NavbarProps) {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled || menuOpen
-            ? 'bg-white shadow-sm'
+            ? 'bg-[#E3E3E3] shadow-sm'
             : transparent
             ? 'bg-transparent'
-            : 'bg-white',
+            : 'bg-[#E3E3E3]',
         )}
       >
         <div className="mx-auto px-5 md:px-10 xl:px-[100px] h-[90px] flex items-center justify-between">
@@ -74,9 +74,11 @@ export function Navbar({ transparent = false }: NavbarProps) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'py-1 text-[18px] transition-opacity hover:opacity-60',
-                    isActive ? 'font-bold' : 'font-normal',
-                    isDark ? 'text-white' : 'text-navy',
+                    'py-1 text-[18px] border-b-2 transition-colors',
+                    isActive
+                      ? 'font-bold border-current'
+                      : 'font-normal border-transparent hover:font-bold hover:border-current',
+                    isDark ? 'text-white' : 'text-black',
                   )}
                 >
                   {link.label}
@@ -91,7 +93,7 @@ export function Navbar({ transparent = false }: NavbarProps) {
               href="/contact"
               className={cn(
                 'hidden xl:inline-flex rounded-full border px-6 py-2 text-base font-medium uppercase tracking-widest transition-opacity hover:opacity-70',
-                isDark ? 'border-white text-white' : 'border-navy text-navy',
+                isDark ? 'border-white text-white' : 'border-black text-black',
               )}
             >
               Speak with us
@@ -109,21 +111,21 @@ export function Navbar({ transparent = false }: NavbarProps) {
                 className={cn(
                   'block w-6 h-[2px] transition-all duration-300',
                   menuOpen ? 'rotate-45 translate-y-2' : '',
-                  isDark ? 'bg-white' : 'bg-navy',
+                  isDark ? 'bg-white' : 'bg-black',
                 )}
               />
               <span
                 className={cn(
                   'block w-6 h-[2px] transition-all duration-300',
                   menuOpen ? 'opacity-0' : '',
-                  isDark ? 'bg-white' : 'bg-navy',
+                  isDark ? 'bg-white' : 'bg-black',
                 )}
               />
               <span
                 className={cn(
                   'block w-6 h-[2px] transition-all duration-300',
                   menuOpen ? '-rotate-45 -translate-y-2' : '',
-                  isDark ? 'bg-white' : 'bg-navy',
+                  isDark ? 'bg-white' : 'bg-black',
                 )}
               />
             </button>
