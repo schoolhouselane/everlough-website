@@ -28,7 +28,8 @@ export function Footer() {
               alt="Everlough"
               width={238}
               height={81}
-              className="w-auto h-auto"
+              unoptimized
+              style={{ width: 238, height: 81 }}
             />
             <p className="font-light text-[15px] md:text-[17px] xl:text-[18px] leading-[1.55] text-[#f5f1e8]/80 mt-1">
               A private operating platform acquiring, stabilising and scaling businesses where value
