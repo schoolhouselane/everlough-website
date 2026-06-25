@@ -38,7 +38,7 @@ function PersonCard({ name, role, image }: { name: string; role: string; image: 
       </div>
 
       {/* Name plate */}
-      <div className="bg-white px-4 xl:px-[21px] py-4 xl:py-5 flex flex-col gap-1 xl:gap-[6px]">
+      <div className="px-4 xl:px-[21px] py-4 xl:py-5 flex flex-col gap-1 xl:gap-[6px]">
         <p className="font-normal text-[12px] md:text-[14px] xl:text-[20px] leading-[1.5] xl:leading-[1.75] tracking-[-0.2px] md:tracking-[-0.5px] xl:tracking-[-1.716px] text-rust">
           {role}
         </p>
