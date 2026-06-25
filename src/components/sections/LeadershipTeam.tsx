@@ -45,9 +45,9 @@ function PersonBlock({ member, priority }: { member: LeadershipMember; priority?
           </h2>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logos/linkedin.svg"
+            src="/images/linkedin.png"
             alt="LinkedIn"
-            className="shrink-0 mt-1 md:mt-2 xl:mt-[24px] w-[60px] md:w-[80px] xl:w-[108px] h-auto"
+            className="shrink-0 mt-1 md:mt-2 xl:mt-[24px] w-[54px] md:w-[72px] xl:w-[108px] xl:h-[27px] h-auto"
           />
         </div>
 
