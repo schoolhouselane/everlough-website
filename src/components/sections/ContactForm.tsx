@@ -152,22 +152,21 @@ function Field({
   error?:   string
 }) {
   return (
-    <div className="flex flex-col gap-[8px]">
-      <label htmlFor={name} className="font-normal text-[14px] md:text-[15px] xl:text-[16px] leading-[1.4] text-black">
-        {label}
-      </label>
+    <div className="flex flex-col gap-[6px]">
+      <label htmlFor={name} className="sr-only">{label}</label>
       <input
         id={name}
         name={name}
         type={type}
         value={value}
+        placeholder={label}
         onChange={onChange}
         required={required}
         className={cn(
           'w-full bg-transparent border-b pb-2',
           'font-normal text-[14px] md:text-[15px] xl:text-[16px] leading-[1.4] text-black',
           'outline-none transition-colors',
-          'placeholder:text-black/30',
+          'placeholder:text-black/50',
           error
             ? 'border-red-500 focus:border-red-500'
             : 'border-black/30 focus:border-navy',
