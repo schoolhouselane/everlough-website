@@ -46,7 +46,7 @@ export function ApproachAdvisers() {
         {rows.map((row) => (
           <div key={row.title}>
             <div className="border-t border-navy/20" />
-            <div className="flex flex-col gap-4 py-8 md:py-10 xl:flex-row xl:items-start xl:justify-between xl:py-[70px]">
+            <div className="flex flex-col gap-4 py-8 md:py-10 xl:flex-row xl:items-center xl:justify-between xl:py-[70px]">
               <h3 className="font-medium text-[24px] md:text-[32px] xl:text-[45px] leading-[1.25] md:leading-[1.2] xl:leading-[1.2] tracking-[-0.5px] md:tracking-[-1px] xl:tracking-[-1.716px] text-navy xl:w-[300px] xl:shrink-0">
                 {row.title}
               </h3>
