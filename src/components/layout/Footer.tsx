@@ -24,11 +24,11 @@ export function Footer() {
           {/* Brand */}
           <div className="xl:w-[440px] xl:shrink-0 flex flex-col gap-4">
             <Image
-              src="/images/logo-white.png"
+              src="/images/logo-footer.png"
               alt="Everlough"
-              width={218}
-              height={60}
-              className="h-[38px] xl:h-[45px] w-auto"
+              width={238}
+              height={81}
+              className="w-auto h-auto"
             />
             <p className="font-light text-[15px] md:text-[17px] xl:text-[18px] leading-[1.55] text-[#f5f1e8]/80 mt-1">
               A private operating platform acquiring, stabilising and scaling businesses where value

@@ -60,10 +60,10 @@ export function Navbar() {
           {/* Logo */}
           <a href="/" className="shrink-0 z-10">
             <Image
-              src="/images/logo-black.png"
+              src="/images/logo.png"
               alt="Everlough"
-              width={218}
-              height={60}
+              width={1007}
+              height={276}
               priority
               className="h-[38px] md:h-[42px] xl:h-[48px] w-auto mix-blend-multiply"
             />
