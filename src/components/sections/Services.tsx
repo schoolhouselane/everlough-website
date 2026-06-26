@@ -12,17 +12,17 @@ const services: ServiceItem[] = [
   {
     title:       'Acquisition',
     description: 'We acquire businesses where execution is the constraint.',
-    image:       '/images/services/acquisition.png',
+    image:       '/images/homepage/acquisition.png',
   },
   {
     title:       'Operation',
     description: 'We operate the businesses we own.',
-    image:       '/images/services/operation.png',
+    image:       '/images/homepage/operation.png',
   },
   {
     title:       'Stewardship',
     description: 'We hold for as long as the business is best served by Everlough.',
-    image:       '/images/services/stewardship.png',
+    image:       '/images/homepage/stewardship.png',
   },
 ]
 

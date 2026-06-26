@@ -20,7 +20,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero
-          image="/images/hero.png"
+          image="/images/homepage/homepage-hero.png"
           headline="We operate the businesses we own."
           body="A hands-on operating platform built to acquire, build, and scale businesses where value is constrained by execution rather than market opportunity."
         />

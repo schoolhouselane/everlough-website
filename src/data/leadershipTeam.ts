@@ -46,7 +46,7 @@ export const leadershipTeam: LeadershipMember[] = [
     id:            'darren-mcgrath',
     name:          'Darren Mc Grath',
     role:          'Chief Marketing Officer',
-    image:         '/images/team/darren-mcgrath.png',
+    image:         '/images/team/darren-mcGrath.png',
     imagePosition: 'right',
     bio: [
       'A brand builder and campaign director with more than two decades of practice across agency, founder and operating roles. He served as Managing Director of Brando, one of Ireland’s leading independent creative agencies, where he led the strategic and creative direction of the business across its full client portfolio.',
