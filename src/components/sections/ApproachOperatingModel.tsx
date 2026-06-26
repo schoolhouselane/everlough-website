@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/cn'
 
-const items = [
+const items: Array<{ number: string; title: ReactNode; body: string }> = [
   {
     number: '01',
     title:  'Control or material influence',
@@ -17,7 +18,7 @@ const items = [
   },
   {
     number: '03',
-    title:  'Patient capital, deliberate growth',
+    title:  <>Patient capital,<br />deliberate growth</>,
     body:   "We hold for as long as the business is best served by Everlough's stewardship. Growth is funded by proven unit economics, not by leverage or by raising more capital against a higher multiple.",
   },
 ]
@@ -47,7 +48,7 @@ export function ApproachOperatingModel() {
 
   return (
     <section className="relative bg-rust overflow-hidden">
-      <div className="xl:flex xl:min-h-[680px]">
+      <div className="xl:flex xl:min-h-[971px]">
         {/* Left: content */}
         <div className="px-5 md:px-10 xl:pl-[106px] xl:pr-16 py-16 md:py-20 xl:py-[100px] xl:w-[55%] xl:shrink-0 relative z-10">
           <h2 className={cn(
