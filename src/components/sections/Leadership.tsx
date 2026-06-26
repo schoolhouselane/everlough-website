@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { UnderlineLink } from '@/components/ui/UnderlineLink'
-import { team } from '@/data/team'
+import { team, type TeamMember } from '@/data/team'
 
 export function Leadership() {
   return (
@@ -23,16 +23,17 @@ export function Leadership() {
   )
 }
 
-function PersonCard({ name, role, image }: { name: string; role: string; image: string }) {
+function PersonCard({ name, role, image, width, height }: TeamMember) {
   return (
     <div className="flex flex-col gap-4 xl:gap-5">
-      {/* Photo — fully rounded, no enclosing card wrapper */}
-      <div className="relative aspect-[3/4] overflow-hidden rounded-[15px] shadow-[0_3px_16px_rgba(0,0,0,0.2)]">
+      {/* Photo at its natural aspect ratio — no forced crop */}
+      <div className="overflow-hidden rounded-[15px] shadow-[0px_3px_16.1px_0px_rgba(0,0,0,0.27)]">
         <Image
           src={image}
           alt={name}
-          fill
-          className="object-cover object-top"
+          width={width}
+          height={height}
+          className="w-full h-auto"
           sizes="(max-width: 768px) 50vw, (max-width: 1280px) 50vw, 25vw"
         />
       </div>
