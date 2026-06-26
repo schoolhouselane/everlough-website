@@ -10,7 +10,7 @@ import { Leadership } from '@/components/sections/Leadership'
 import { OperatingModel } from '@/components/sections/OperatingModel'
 
 export const metadata: Metadata = {
-  title:       'Everlough Group — Private Operating Platform',
+  title:       'Everlough Group | Private Operating Platform',
   description: 'A hands-on operating platform built to acquire, build, and scale businesses where value is constrained by execution rather than market opportunity.',
 }
 

@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default:  'Everlough Group — Private Operating Platform',
+    default:  'Everlough Group | Private Operating Platform',
     template: '%s | Everlough Group',
   },
   description:

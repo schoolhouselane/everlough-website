@@ -7,7 +7,7 @@ import { ApproachQuote } from '@/components/sections/ApproachQuote'
 import { ApproachOperatingModel } from '@/components/sections/ApproachOperatingModel'
 
 export const metadata: Metadata = {
-  title:       'How We Operate — Everlough Group',
+  title:       'How We Operate | Everlough Group',
   description: 'Everlough takes control or material influence as a starting condition. Every business we own has an Everlough operator in a seat.',
 }
 

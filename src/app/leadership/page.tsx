@@ -6,7 +6,7 @@ import { LeadershipTeam } from '@/components/sections/LeadershipTeam'
 import { LeadershipCTA } from '@/components/sections/LeadershipCTA'
 
 export const metadata: Metadata = {
-  title:       'Leadership — Everlough Group',
+  title:       'Leadership | Everlough Group',
   description: 'Everlough is run by a small group of operating principals who hold board and executive roles inside the businesses the group owns.',
 }
 

@@ -50,7 +50,7 @@ export const leadershipTeam: LeadershipMember[] = [
     imagePosition: 'right',
     bio: [
       'A brand builder and campaign director with more than two decades of practice across agency, founder and operating roles. He served as Managing Director of Brando, one of Ireland’s leading independent creative agencies, where he led the strategic and creative direction of the business across its full client portfolio.',
-      'During that period he directed pan-European campaigns for Heineken, O2 and Mastercard — brands operating at scale, with the commercial discipline those mandates require.',
+      'During that period he directed pan-European campaigns for Heineken, O2 and Mastercard, brands operating at scale, with the commercial discipline those mandates require.',
     ],
   },
   {

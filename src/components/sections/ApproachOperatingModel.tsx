@@ -9,7 +9,7 @@ const items: Array<{ number: string; title: ReactNode; body: string }> = [
   {
     number: '01',
     title:  'Control or material influence',
-    body:   'We acquire majority positions or take a material minority where governance allows us to shape decisions. Passive capital is not what we do — and not what our portfolio companies need from us.',
+    body:   'We acquire majority positions or take a material minority where governance allows us to shape decisions. Passive capital is not what we do, and it is not what our portfolio companies need from us.',
   },
   {
     number: '02',

@@ -117,7 +117,7 @@ export function ContactForm() {
               className="mt-0.5 shrink-0 size-[16px] rounded-[3px] border border-navy accent-navy"
             />
             <span className="font-normal text-[12px] md:text-[13px] xl:text-[14px] leading-[1.5] text-navy/60 lowercase">
-              Subscribe to our newsletter — don&apos;t miss out on anything from us.
+              Subscribe to our newsletter and be the first to hear from us.
             </span>
           </label>
 

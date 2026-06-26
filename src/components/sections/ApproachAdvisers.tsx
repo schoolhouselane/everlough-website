@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal'
 const rows: Array<{ title: ReactNode; body: string }> = [
   {
     title: 'Capital structure',
-    body: 'We work with structured capital — subordinated debt, vendor loan notes, deferred consideration — when it helps the deal close. We do not over-engineer the capital stack to create fees.',
+    body: 'We work with structured capital including subordinated debt, vendor loan notes and deferred consideration when it helps the deal close. We do not over-engineer the capital stack to create fees.',
   },
   {
     title: 'With creditors',
