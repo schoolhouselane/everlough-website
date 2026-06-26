@@ -25,9 +25,9 @@ export function Leadership() {
 
 function PersonCard({ name, role, image }: { name: string; role: string; image: string }) {
   return (
-    <div className="flex flex-col rounded-[15px] overflow-hidden shadow-[0_3px_16px_rgba(0,0,0,0.2)]">
-      {/* Photo */}
-      <div className="relative aspect-[3/4] overflow-hidden">
+    <div className="flex flex-col gap-4 xl:gap-5">
+      {/* Photo — fully rounded, no enclosing card wrapper */}
+      <div className="relative aspect-[3/4] overflow-hidden rounded-[15px] shadow-[0_3px_16px_rgba(0,0,0,0.2)]">
         <Image
           src={image}
           alt={name}
@@ -37,8 +37,8 @@ function PersonCard({ name, role, image }: { name: string; role: string; image: 
         />
       </div>
 
-      {/* Name plate */}
-      <div className="px-4 xl:px-[21px] py-4 xl:py-5 flex flex-col gap-1 xl:gap-[6px]">
+      {/* Text below photo — no background, sits on page bg */}
+      <div className="flex flex-col gap-1 xl:gap-[6px]">
         <p className="font-normal text-[12px] md:text-[14px] xl:text-[20px] leading-[1.5] xl:leading-[1.75] tracking-[-0.2px] md:tracking-[-0.5px] xl:tracking-[-1.716px] text-rust">
           {role}
         </p>

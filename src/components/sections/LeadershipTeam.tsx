@@ -27,15 +27,15 @@ function PersonBlock({ member, priority }: { member: LeadershipMember; priority?
       'xl:flex-row xl:items-start xl:gap-[130px]',
       !isLeft && 'xl:flex-row-reverse',
     )}>
-      {/* Photo — no border, no rounded corners, no shadow per Figma */}
-      <div className="relative w-full xl:w-[605px] xl:shrink-0 h-[420px] md:h-[520px] xl:h-[782px] overflow-hidden">
+      {/* Photo — Figma: 596×634, rounded-[15px], shadow from Figma spec */}
+      <div className="relative w-full xl:w-[596px] xl:shrink-0 h-[420px] md:h-[520px] xl:h-[634px] overflow-hidden rounded-[15px] shadow-[12px_4px_16.1px_0px_rgba(0,0,0,0.27)]">
         <Image
           src={image}
           alt={name}
           fill
           priority={priority}
           className="object-cover object-top"
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 605px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 596px"
         />
       </div>
 

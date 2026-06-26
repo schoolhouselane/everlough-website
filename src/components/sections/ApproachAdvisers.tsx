@@ -1,7 +1,8 @@
 import Image from 'next/image'
+import type { ReactNode } from 'react'
 import { Reveal } from '@/components/ui/Reveal'
 
-const rows = [
+const rows: Array<{ title: ReactNode; body: string }> = [
   {
     title: 'Capital structure',
     body: 'We work with structured capital — subordinated debt, vendor loan notes, deferred consideration — when it helps the deal close. We do not over-engineer the capital stack to create fees.',
@@ -11,7 +12,7 @@ const rows = [
     body: 'We have worked alongside receivership processes, distressed sellers, and creditor committees. We move quickly, communicate clearly, and do not use complexity as a negotiating tool.',
   },
   {
-    title: 'Patient capital, deliberate growth.',
+    title: <>Patient capital,<br />deliberate growth.</>,
     body: 'Everlough holds businesses for the medium to long term. We are not building toward a trade sale or a fund exit. Returns come from operating performance, not from financial re-engineering.',
   },
 ]
@@ -47,7 +48,7 @@ export function ApproachAdvisers() {
       {/* 3 content rows */}
       <div>
         {rows.map((row, i) => (
-          <Reveal key={row.title} delay={i * 80}>
+          <Reveal key={i} delay={i * 80}>
           <div>
             <div className="border-t border-navy/20" />
             <div className="flex flex-col gap-4 py-8 md:py-10 xl:flex-row xl:items-center xl:justify-between xl:py-[70px]">

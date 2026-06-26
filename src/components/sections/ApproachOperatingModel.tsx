@@ -43,7 +43,7 @@ function PlusIcon() {
 }
 
 export function ApproachOperatingModel() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <section className="relative bg-rust overflow-hidden">
@@ -121,12 +121,10 @@ export function ApproachOperatingModel() {
             sizes="(max-width: 1280px) 0vw, 50vw"
             className="object-cover object-center"
           />
-          {/* Gradient fade from left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-rust via-rust/20 to-transparent" />
         </div>
       </div>
 
-      {/* Mobile: image below content */}
+      {/* Mobile: image below content — hard cut, no gradient blend */}
       <div className="xl:hidden relative h-[240px] md:h-[340px]">
         <Image
           src="/images/approach/operating-model.png"
@@ -135,7 +133,6 @@ export function ApproachOperatingModel() {
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 0vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-rust/60 to-transparent" />
       </div>
     </section>
   )
