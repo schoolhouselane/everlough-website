@@ -16,13 +16,13 @@ const offices = [
 export function Footer() {
   return (
     <footer className="bg-navy mt-12 md:mt-20 xl:mt-0">
-      <div className="mx-auto px-5 md:px-10 xl:px-[156px] pt-10 md:pt-14 xl:pt-[92px]">
+      <div className="mx-auto px-5 md:px-10 xl:px-[106px] pt-10 md:pt-14 xl:pt-[92px]">
 
         {/* Top grid */}
-        <div className="flex flex-col xl:flex-row gap-10 md:gap-12 xl:gap-[168px] xl:items-start">
+        <div className="flex flex-col xl:flex-row gap-10 md:gap-12 xl:gap-[60px] xl:items-start">
 
           {/* Brand */}
-          <div className="xl:w-[440px] xl:shrink-0 flex flex-col gap-4">
+          <div className="xl:w-[380px] xl:shrink-0 flex flex-col gap-4">
             <Image
               src="/images/everlough-logo-footer.png"
               alt="Everlough"
@@ -38,10 +38,10 @@ export function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:flex xl:gap-[60px] gap-x-6 gap-y-8 min-w-0">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:flex xl:gap-[50px] gap-x-6 gap-y-8 min-w-0 xl:flex-1">
 
             {/* Site nav */}
-            <div className="flex flex-col gap-4 xl:gap-5 xl:w-[160px] xl:shrink-0">
+            <div className="flex flex-col gap-4 xl:gap-5">
               <p className="font-medium text-[15px] xl:text-[20px] text-[#f5f1e8]">Site</p>
               <ul className="flex flex-col gap-3 xl:gap-[15px]">
                 {siteLinks.map((link) => (
@@ -58,7 +58,7 @@ export function Footer() {
             </div>
 
             {/* Offices */}
-            <div className="flex flex-col gap-4 xl:gap-5 xl:w-[214px] xl:shrink-0">
+            <div className="flex flex-col gap-4 xl:gap-5">
               <p className="font-medium text-[15px] xl:text-[20px] text-[#f5f1e8]">Offices</p>
               <div className="flex flex-col gap-4 xl:gap-[17px]">
                 {offices.map((office) => (
@@ -75,7 +75,7 @@ export function Footer() {
             </div>
 
             {/* Enquiries */}
-            <div className="flex flex-col gap-4 xl:gap-5 xl:w-[221px] xl:shrink-0 col-span-2 md:col-span-1">
+            <div className="flex flex-col gap-4 xl:gap-5 col-span-2 md:col-span-1">
               <p className="font-medium text-[15px] xl:text-[20px] text-[#f5f1e8]">Enquiries</p>
               <div className="flex flex-col gap-2 xl:gap-3">
                 <a

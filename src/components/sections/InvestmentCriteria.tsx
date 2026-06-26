@@ -18,7 +18,7 @@ export function InvestmentCriteria() {
   return (
     <section className="bg-forest mt-12 md:mt-20 xl:mt-[159px]">
       <div className="mx-auto px-5 md:px-10 xl:px-[118px] py-12 md:py-16 xl:py-[87px]">
-        <div className="flex flex-col xl:flex-row gap-10 md:gap-12 xl:gap-[278px] xl:items-center">
+        <div className="flex flex-col xl:flex-row gap-10 md:gap-12 xl:gap-[60px] xl:items-center">
 
           {/* Left: headline + CTA */}
           <Reveal className="flex flex-col gap-7 md:gap-8 xl:gap-[60px] xl:w-[563px] xl:shrink-0">
@@ -47,7 +47,7 @@ export function InvestmentCriteria() {
 function StatBlock({ value, label, description }: Stat) {
   return (
     <div className="flex flex-col gap-2 xl:gap-[11px] text-cream">
-      <p className="font-semibold text-[40px] md:text-[52px] xl:text-[70px] leading-[1.1] xl:leading-[1.16] tracking-[-1px] xl:tracking-[-1.716px]">
+      <p className="font-semibold text-[40px] md:text-[52px] xl:text-[55px] leading-[1.1] xl:leading-[1.16] tracking-[-1px] xl:tracking-[-1.716px]">
         {value}
       </p>
       <p className="font-medium text-[16px] md:text-[18px] xl:text-[25px] leading-[1.4]">
