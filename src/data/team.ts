@@ -33,6 +33,14 @@ export const team: TeamMember[] = [
     height: 413,
   },
   {
+    id:     'darren-mcgrath',
+    name:   'Darren Mc Grath',
+    role:   'Chief Marketing Officer',
+    image:  '/images/team/darren-mcGrath.png',
+    width:  621,
+    height: 657,
+  },
+  {
     id:     'adam-ferris',
     name:   'Adam Ferris',
     role:   'Managing Director',
