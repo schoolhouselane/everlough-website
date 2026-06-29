@@ -87,9 +87,12 @@ export function ContactHero() {
             </div>
             <div className="mt-[160px] flex flex-col gap-[11px]">
               <div className="border-b border-white pb-[10px]">
-                <p className="font-bold text-[24px] leading-[1.3] text-white lowercase tracking-[-0.4px]">
+                <a
+                  href="mailto:enquiries@everloughgroup.com"
+                  className="font-bold text-[24px] leading-[1.3] text-white lowercase tracking-[-0.4px] hover:opacity-70 transition-opacity"
+                >
                   enquiries@everloughgroup.com
-                </p>
+                </a>
               </div>
               <p className="font-normal text-[16px] leading-[1.75] text-white/80">
                 For new opportunities, transaction enquiries, and general correspondence.
@@ -127,9 +130,12 @@ export function ContactHero() {
       <div className="xl:hidden mt-8 md:mt-10 flex flex-col gap-6">
         <div className="flex flex-col gap-3 pt-6 border-t border-navy/20">
           <div className="border-b border-navy pb-2">
-            <p className="font-bold text-[18px] md:text-[20px] leading-[1.3] text-navy lowercase">
+            <a
+              href="mailto:enquiries@everloughgroup.com"
+              className="font-bold text-[18px] md:text-[20px] leading-[1.3] text-navy lowercase hover:opacity-70 transition-opacity"
+            >
               enquiries@everloughgroup.com
-            </p>
+            </a>
           </div>
           <p className="font-normal text-[14px] md:text-[16px] leading-[1.6] text-navy/70">
             For new opportunities, transaction enquiries, and general correspondence.
