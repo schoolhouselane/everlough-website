@@ -70,7 +70,7 @@ export function ApproachOperatingModel() {
                   {/* Row — clickable */}
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-6 py-6 md:py-8 xl:py-[28px] text-left"
+                    className="w-full flex items-center justify-between gap-6 py-6 md:py-8 xl:py-[28px] text-left cursor-pointer"
                   >
                     <div className="flex items-center gap-5 md:gap-8 xl:gap-[40px] min-w-0">
                       <span className={cn(
