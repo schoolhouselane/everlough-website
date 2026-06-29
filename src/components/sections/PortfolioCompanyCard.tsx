@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 interface PortfolioCompanyCardProps {
+  id?: string
   tag: string
   title: string
   bodyLeft: string
@@ -14,6 +15,7 @@ interface PortfolioCompanyCardProps {
 }
 
 export function PortfolioCompanyCard({
+  id,
   tag,
   title,
   bodyLeft,
@@ -24,7 +26,7 @@ export function PortfolioCompanyCard({
   imageHeight,
 }: PortfolioCompanyCardProps) {
   return (
-    <article className="px-5 md:px-10 xl:px-[106px] py-10 md:py-14 xl:py-16 border-t border-navy/15">
+    <article id={id} className="px-5 md:px-10 xl:px-[106px] py-10 md:py-14 xl:py-16 border-t border-navy/15">
       {/* Company info row */}
       <div className="flex flex-col xl:flex-row gap-4 md:gap-6 xl:gap-0 mb-8 md:mb-10 xl:mb-12">
         {/* Left col — tag */}

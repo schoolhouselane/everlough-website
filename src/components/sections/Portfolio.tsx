@@ -63,7 +63,7 @@ function PortfolioItem({
         {description}
       </p>
 
-      <UnderlineLink href={`/portfolio/${slug}`} className="whitespace-nowrap">Read more</UnderlineLink>
+      <UnderlineLink href={`/portfolio#${slug}`} className="whitespace-nowrap">Read more</UnderlineLink>
     </div>
   )
 }
