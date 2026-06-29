@@ -86,7 +86,7 @@ export function ContactHero() {
               </p>
             </div>
             <div className="mt-[160px] flex flex-col gap-[11px]">
-              <div className="border-b border-white pb-[10px]">
+              <div className="self-start border-b border-white pb-[10px]">
                 <a
                   href="mailto:enquiries@everloughgroup.com"
                   className="font-bold text-[24px] leading-[1.3] text-white lowercase tracking-[-0.4px] hover:opacity-70 transition-opacity"
@@ -129,7 +129,7 @@ export function ContactHero() {
       {/* ── Mobile / Tablet: contact info below form ── */}
       <div className="xl:hidden mt-8 md:mt-10 flex flex-col gap-6">
         <div className="flex flex-col gap-3 pt-6 border-t border-navy/20">
-          <div className="border-b border-navy pb-2">
+          <div className="self-start border-b border-navy pb-2">
             <a
               href="mailto:enquiries@everloughgroup.com"
               className="font-bold text-[18px] md:text-[20px] leading-[1.3] text-navy lowercase hover:opacity-70 transition-opacity"

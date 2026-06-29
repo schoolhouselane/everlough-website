@@ -25,7 +25,7 @@ export function InvestmentCriteria() {
             <h2 className="font-bold text-[32px] md:text-[44px] xl:text-[60px] leading-[1.2] md:leading-[1.25] xl:leading-[1.35] tracking-[-0.8px] md:tracking-[-1.2px] xl:tracking-[-1.716px] capitalize text-cream text-balance">
               We move quickly where the situation warrants it.
             </h2>
-            <UnderlineLink href="/contact" light>
+            <UnderlineLink href="/contact" light className="self-start">
               Start a confidential conversation
             </UnderlineLink>
           </Reveal>
