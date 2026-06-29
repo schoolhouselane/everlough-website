@@ -7,7 +7,9 @@ interface PortfolioCompanyCardProps {
   bodyRight?: string
   imageSrc: string
   imageAlt: string
-  /** Extra CSS classes to pass to the outermost element */
+  /** When true, renders image at its natural aspect ratio with no cropping */
+  imageWidth?: number
+  imageHeight?: number
   className?: string
 }
 
@@ -18,6 +20,8 @@ export function PortfolioCompanyCard({
   bodyRight,
   imageSrc,
   imageAlt,
+  imageWidth,
+  imageHeight,
 }: PortfolioCompanyCardProps) {
   return (
     <article className="px-5 md:px-10 xl:px-[106px] py-10 md:py-14 xl:py-16 border-t border-navy/15">
@@ -49,15 +53,26 @@ export function PortfolioCompanyCard({
       </div>
 
       {/* Full-width image */}
-      <div className="relative h-[220px] md:h-[380px] xl:h-[620px] rounded-[10px] md:rounded-[12px] xl:rounded-[15px] overflow-hidden">
+      {imageWidth && imageHeight ? (
         <Image
           src={imageSrc}
           alt={imageAlt}
-          fill
-          className="object-cover object-center"
+          width={imageWidth}
+          height={imageHeight}
+          className="w-full h-auto rounded-[10px] md:rounded-[12px] xl:rounded-[15px]"
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1530px"
         />
-      </div>
+      ) : (
+        <div className="relative h-[220px] md:h-[380px] xl:h-[620px] rounded-[10px] md:rounded-[12px] xl:rounded-[15px] overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1530px"
+          />
+        </div>
+      )}
     </article>
   )
 }

@@ -24,7 +24,7 @@ export function Footer() {
           {/* Brand */}
           <div className="xl:w-[380px] xl:shrink-0 flex flex-col gap-4">
             <Image
-              src="/images/everlough-logo-footer.png"
+              src="/images/logos/everlough-logo-footer.png"
               alt="Everlough"
               width={238}
               height={81}

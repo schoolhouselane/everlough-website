@@ -76,19 +76,18 @@ export function Leadership() {
   )
 }
 
-function PersonCard({ name, role, image, width, height }: TeamMember) {
+function PersonCard({ name, role, image }: TeamMember) {
   return (
     <div
       className="flex flex-col gap-4 xl:gap-5 shrink-0 w-[72vw] md:w-[42vw] xl:w-[calc(25%-27px)]"
       style={{ scrollSnapAlign: 'start' }}
     >
-      <div className="overflow-hidden rounded-[15px] shadow-[0px_3px_16.1px_0px_rgba(0,0,0,0.27)]">
+      <div className="relative w-full aspect-[424/398] rounded-[15px] overflow-hidden shadow-[0px_3px_16.1px_0px_rgba(0,0,0,0.27)]">
         <Image
           src={image}
           alt={name}
-          width={width}
-          height={height}
-          className="w-full h-auto"
+          fill
+          className="object-cover object-top"
           sizes="(max-width: 768px) 72vw, (max-width: 1280px) 42vw, 25vw"
         />
       </div>

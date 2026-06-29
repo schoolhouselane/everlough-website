@@ -31,7 +31,7 @@ export function AboutStatement() {
         {/* Logo — hidden on mobile, shown from md */}
         <Reveal delay={200} className="hidden md:block shrink-0 self-center xl:self-auto">
           <Image
-            src="/images/homepage/logos/everlough-logo-homepage.png"
+            src="/images/logos/everlough-logo-homepage.png"
             alt="Everlough Holdings"
             width={373}
             height={320}

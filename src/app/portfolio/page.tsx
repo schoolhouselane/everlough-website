@@ -7,41 +7,67 @@ import { PortfolioGroupHeading } from '@/components/sections/PortfolioGroupHeadi
 import { PortfolioCompanyCard } from '@/components/sections/PortfolioCompanyCard'
 import { PortfolioCTA } from '@/components/sections/PortfolioCTA'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://everlough.com'
+const PAGE_URL = `${SITE_URL}/portfolio`
+
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description:
-    'The businesses Everlough acquires, stabilises and operates. Four companies held deliberately, run closely, with two core engines and a small set of additional businesses.',
+  title:       'Portfolio | Everlough Group',
+  description: 'Everlough holds four businesses across technology, data, hospitality and creative services — acquired, stabilised and operated directly. Data Direct Technology, Data Direct Intelligence, Schoolhouse Lane and Vivo Hotels.',
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    url:         PAGE_URL,
+    title:       'Portfolio | Everlough Group',
+    description: 'Everlough holds four businesses across technology, data, hospitality and creative services — acquired, stabilised and operated directly.',
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type':    'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',      item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Portfolio', item: PAGE_URL },
+  ],
+}
+
+const webPageSchema = {
+  '@context':  'https://schema.org',
+  '@type':     'WebPage',
+  '@id':       `${PAGE_URL}/#webpage`,
+  url:          PAGE_URL,
+  name:        'Portfolio | Everlough Group',
+  description: 'Everlough holds four businesses across technology, data, hospitality and creative services, acquired, stabilised and operated directly.',
+  isPartOf:    { '@id': `${SITE_URL}/#website` },
+  breadcrumb:  breadcrumbSchema,
 }
 
 export default function PortfolioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <Navbar />
 
       <main>
-        {/* ── Hero ── */}
         <PortfolioHero />
-
-        {/* ── Stats bar ── */}
         <PortfolioStats />
 
-        {/* ════════════════════════════
-            GROUP 1 — Two core engines
-            ════════════════════════════ */}
         <PortfolioGroupHeading>
           Two businesses at the centre of the group.
         </PortfolioGroupHeading>
 
-        {/* Data Direct Technology */}
         <PortfolioCompanyCard
           tag="Core Engine"
           title="Data Direct Technology, one of Ireland's longest-established IT distributors."
           bodyLeft="Hardware, software and managed services to mid-market businesses and the public sector across Ireland. The business has operated for more than three decades through every major shift in enterprise IT, from on-premise to cloud and from procurement to managed service, and remains profitable, cash-generative and deeply embedded with its customer base."
-          imageSrc="/images/portfolio/datadirect-tech.png"
+          imageSrc="/images/portfolio/datadirect-technology.png"
           imageAlt="Data Direct Technology, B2B online shop"
+          imageWidth={1529}
+          imageHeight={619}
         />
 
-        {/* Data Direct Intelligence */}
         <PortfolioCompanyCard
           tag="Core Engine"
           title="Data Direct Intelligence, the data, analytics and applied-AI services engine of the group."
@@ -49,16 +75,14 @@ export default function PortfolioPage() {
           bodyRight="Built deliberately as a complement to Data Direct Technology, it operates as a services engine alongside a distribution engine and is the second of the group's two core engines."
           imageSrc="/images/portfolio/datadirect-intelligence.png"
           imageAlt="Data Direct Intelligence, data and analytics"
+          imageWidth={1529}
+          imageHeight={759}
         />
 
-        {/* ═══════════════════════════════════════════
-            GROUP 2 — Additional businesses
-            ═══════════════════════════════════════════ */}
         <PortfolioGroupHeading>
           A small set of additional businesses around the engines.
         </PortfolioGroupHeading>
 
-        {/* Schoolhouse Lane */}
         <PortfolioCompanyCard
           tag="Creative consultancy"
           title="Schoolhouse Lane, AI Powered & Creative Design."
@@ -68,7 +92,6 @@ export default function PortfolioPage() {
           imageAlt="Schoolhouse Lane, AI-powered creative design"
         />
 
-        {/* Funteron */}
         <PortfolioCompanyCard
           tag="Operating Company"
           title="Funteron, a specialist software business held by Everlough."
@@ -78,7 +101,6 @@ export default function PortfolioPage() {
           imageAlt="Funteron, specialist software"
         />
 
-        {/* Vivo Hotels */}
         <PortfolioCompanyCard
           tag="Operating Company"
           title="Vivo Hotels, Everlough's hospitality operating company running a portfolio of design-led properties."
@@ -88,7 +110,6 @@ export default function PortfolioPage() {
           imageAlt="Vivo Hotels, design-led hospitality"
         />
 
-        {/* ── CTA banner ── */}
         <PortfolioCTA />
       </main>
 

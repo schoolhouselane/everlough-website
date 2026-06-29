@@ -60,7 +60,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="/" className="shrink-0 z-10">
             <Image
-              src="/images/everlough-logo-navbar.png"
+              src="/images/logos/everlough-logo-navbar.png"
               alt="Everlough"
               width={1007}
               height={276}
@@ -124,7 +124,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-[64px] px-[16px] mx-[24px] border-b border-[rgba(54,31,6,0.16)] shrink-0">
           <a href="/" onClick={() => setMenuOpen(false)}>
             <Image
-              src="/images/everlough-logo-navbar.png"
+              src="/images/logos/everlough-logo-navbar.png"
               alt="Everlough"
               width={123}
               height={34}
