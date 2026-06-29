@@ -12,7 +12,7 @@ const rows: Array<{ title: ReactNode; body: string }> = [
     body: 'We have worked alongside receivership processes, distressed sellers, and creditor committees. We move quickly, communicate clearly, and do not use complexity as a negotiating tool.',
   },
   {
-    title: <>Patient capital,<br />deliberate growth.</>,
+    title: <><span className="block">Patient capital,</span><span className="block">deliberate growth.</span></>,
     body: 'Everlough holds businesses for the medium to long term. We are not building toward a trade sale or a fund exit. Returns come from operating performance, not from financial re-engineering.',
   },
 ]
@@ -52,7 +52,7 @@ export function ApproachAdvisers() {
           <div>
             <div className="border-t border-navy/20" />
             <div className="flex flex-col gap-4 py-8 md:py-10 xl:flex-row xl:items-center xl:justify-between xl:py-[70px]">
-              <h3 className="font-medium text-[24px] md:text-[32px] xl:text-[45px] leading-[1.25] md:leading-[1.2] xl:leading-[1.2] tracking-[-0.5px] md:tracking-[-1px] xl:tracking-[-1.716px] text-navy xl:w-[300px] xl:shrink-0">
+              <h3 className="font-medium text-[24px] md:text-[32px] xl:text-[45px] leading-[1.25] md:leading-[1.2] xl:leading-[1.2] tracking-[-0.5px] md:tracking-[-1px] xl:tracking-[-1.716px] text-navy xl:w-[430px] xl:shrink-0">
                 {row.title}
               </h3>
               <p className="font-normal text-[15px] md:text-[18px] xl:text-[20px] leading-[1.65] md:leading-[1.6] xl:leading-[1.7] tracking-[-0.2px] md:tracking-[-0.4px] xl:tracking-[-1.716px] text-navy xl:max-w-[603px]">
