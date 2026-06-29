@@ -93,18 +93,23 @@ export function ApproachOperatingModel() {
                     {isOpen ? <MinusIcon /> : <PlusIcon />}
                   </button>
 
-                  {/* Expanded body */}
-                  {isOpen && (
-                    <p className={cn(
-                      'font-normal text-cream/85 pb-6 md:pb-8 xl:pb-[28px]',
-                      'text-[15px] leading-[1.65] tracking-[-0.2px]',
-                      'md:text-[18px] md:tracking-[-0.4px]',
-                      'xl:text-[22px] xl:leading-[41px] xl:tracking-[-1.716px]',
-                      'xl:max-w-[540px]',
-                    )}>
-                      {item.body}
-                    </p>
-                  )}
+                  {/* Expanded body — grid-rows animation */}
+                  <div className={cn(
+                    'grid transition-[grid-template-rows] duration-300 ease-in-out',
+                    isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
+                  )}>
+                    <div className="overflow-hidden">
+                      <p className={cn(
+                        'font-normal text-cream/85 pb-6 md:pb-8 xl:pb-[28px]',
+                        'text-[15px] leading-[1.65] tracking-[-0.2px]',
+                        'md:text-[18px] md:tracking-[-0.4px]',
+                        'xl:text-[22px] xl:leading-[41px] xl:tracking-[-1.716px]',
+                        'xl:max-w-[540px]',
+                      )}>
+                        {item.body}
+                      </p>
+                    </div>
+                  </div>
 
                   {i === items.length - 1 && <div className="border-t border-cream/20" />}
                 </div>
