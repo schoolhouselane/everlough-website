@@ -88,7 +88,7 @@ const orgSchema = {
   logo: {
     '@type':  'ImageObject',
     '@id':    `${SITE_URL}/#logo`,
-    url:      `${SITE_URL}/images/everlough-logo-navbar.png`,
+    url:      `${SITE_URL}/images/logos/everlough-logo-navbar.png`,
     width:    1007,
     height:   276,
   },
