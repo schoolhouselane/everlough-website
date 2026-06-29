@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { DividerLine } from '@/components/ui/DividerLine'
 import { Reveal } from '@/components/ui/Reveal'
@@ -27,13 +28,14 @@ export function AboutStatement() {
           </Reveal>
         </div>
 
-        {/* Icon — hidden on mobile, shown from md */}
-        <Reveal delay={200} className="hidden md:block xl:w-[373px] xl:h-[320px] shrink-0 w-[200px] h-[180px] md:w-[280px] md:h-[240px] self-center xl:self-auto">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/everlough-icon.svg"
+        {/* Logo — hidden on mobile, shown from md */}
+        <Reveal delay={200} className="hidden md:block shrink-0 self-center xl:self-auto">
+          <Image
+            src="/images/homepage/logos/everlough-logo-homepage.png"
             alt="Everlough Holdings"
-            className="w-full h-full object-contain object-center"
+            width={373}
+            height={320}
+            className="w-[200px] md:w-[260px] xl:w-[373px] h-auto"
           />
         </Reveal>
       </div>
