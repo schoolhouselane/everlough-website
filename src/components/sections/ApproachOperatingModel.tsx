@@ -48,7 +48,7 @@ export function ApproachOperatingModel() {
 
   return (
     <section className="relative bg-rust overflow-hidden">
-      <div className="xl:flex xl:min-h-[971px]">
+      <div className="xl:flex">
         {/* Left: content */}
         <div className="px-5 md:px-10 xl:pl-[106px] xl:pr-16 py-16 md:py-20 xl:py-[100px] xl:w-[55%] xl:shrink-0 relative z-10">
           <h2 className={cn(
@@ -57,7 +57,7 @@ export function ApproachOperatingModel() {
             'md:text-[46px] md:tracking-[-1.2px]',
             'xl:text-[60px] xl:leading-[81.12px] xl:tracking-[-1.716px]',
           )}>
-            The Operating Model.
+            The Operating Model
           </h2>
 
           <div>
