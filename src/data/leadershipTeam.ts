@@ -13,7 +13,7 @@ export const leadershipTeam: LeadershipMember[] = [
     id:            'keith-oloughlin',
     name:          "Keith O'Loughlin",
     role:          'Chairman',
-    image:         '/images/team/keith-oloughlin.png',
+    image:         '/images/team/keith.png',
     imagePosition: 'left',
     bio: [
       'As Chairman of Everlough Holdings, he understands that in a world of “good enough,” the exceptional is found through relentless inquiry.',
@@ -35,7 +35,7 @@ export const leadershipTeam: LeadershipMember[] = [
     id:            'aine-gleghorne',
     name:          'Aine Gleghorne',
     role:          'Chief Financial Officer',
-    image:         '/images/team/aine-gleghorne.png',
+    image:         '/images/team/aine.png',
     imagePosition: 'left',
     bio: [
       'Fellow Chartered Certified Accountant (FCCA). Former Assistant Director, Strategy and Transactions, EY Big Four (2019–2025). 10+ years in private equity, M&A and restructuring across buy-side, sell-side and VDD.',
@@ -46,7 +46,7 @@ export const leadershipTeam: LeadershipMember[] = [
     id:            'darren-mcgrath',
     name:          'Darren Mc Grath',
     role:          'Chief Marketing Officer',
-    image:         '/images/team/darren-mcGrath.png',
+    image:         '/images/team/darren.png',
     imagePosition: 'right',
     bio: [
       'A brand builder and campaign director with more than two decades of practice across agency, founder and operating roles. He served as Managing Director of Brando, one of Ireland’s leading independent creative agencies, where he led the strategic and creative direction of the business across its full client portfolio.',
@@ -57,7 +57,7 @@ export const leadershipTeam: LeadershipMember[] = [
     id:            'adam-ferris',
     name:          'Adam Ferris',
     role:          'Managing Director',
-    image:         '/images/team/adam-ferris.png',
+    image:         '/images/team/adam.png',
     imagePosition: 'left',
     bio: [
       'Adam Ferris is a seasoned B2B SaaS revenue leader with expertise in sales, revenue operations, and go-to-market strategy. He is currently Chief Revenue Officer at Honor Education, where he focuses on helping organisations preserve and scale institutional knowledge and decision-making.',

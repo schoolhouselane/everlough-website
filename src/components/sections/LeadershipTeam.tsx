@@ -34,11 +34,9 @@ function PersonBlock({ member, priority }: { member: LeadershipMember; priority?
           alt={name}
           fill
           priority={priority}
-          className="object-cover object-top scale-[1.05]"
+          className="object-cover object-top scale-[1.1]"
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 50vw"
         />
-        {/* Inset vignette: darkens edges to mask gray studio backgrounds baked into PNGs */}
-        <div className="absolute inset-0 shadow-[inset_0_0_60px_20px_rgba(0,0,0,0.45)]" />
       </div>
 
       {/* Text */}
