@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
   description:
     'A private operating platform that acquires, stabilises and scales lower mid-market businesses across the UK and Ireland.',
+  icons: {
+    icon: '/images/favicon.png',
+  },
   openGraph: {
     type:        'website',
     locale:      'en_IE',
