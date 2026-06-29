@@ -22,21 +22,21 @@ export function ApproachHero() {
 
       {/* Images */}
       <Reveal delay={200}>
-      <div className="flex flex-col gap-3 xl:flex-row xl:items-end xl:gap-[18px]">
+      <div className="flex flex-col gap-3 xl:flex-row xl:items-end xl:gap-[97px]">
         {/* Large landscape — left */}
-        <div className="relative w-full xl:flex-[55] xl:w-auto h-[220px] md:h-[380px] xl:h-[596px] rounded-[15px] overflow-hidden">
+        <div className="relative w-full xl:flex-[46] xl:w-auto h-[220px] md:h-[380px] xl:h-[596px] rounded-[15px] overflow-hidden">
           <Image
             src="/images/approach/approach-1.png"
             alt="Business handshake"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 670px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 520px"
             className="object-cover"
           />
         </div>
 
         {/* Two portraits — right */}
-        <div className="flex gap-3 xl:flex-[45] xl:gap-[12px]">
+        <div className="flex gap-3 xl:flex-[54] xl:gap-[12px]">
           <div className="relative flex-1 h-[160px] md:h-[280px] xl:h-[375px] rounded-[15px] overflow-hidden">
             <Image
               src="/images/approach/approach-2.png"
